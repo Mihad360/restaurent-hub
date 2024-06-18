@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Desserts",
+    "image": "https://i.ibb.co/kxz3mQh/chocolate-brownie-cake-with-scoop-ice-cream.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Soups",
+    "image": "https://i.ibb.co/42syLYf/red-lentil-soup-with-slice-lemon-breadcrumbs.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Pizzas",
+    "image": "https://i.ibb.co/D5bmCVR/mix-pizza-with-tomato-slices-mushroom-olive.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Chickens",
+    "image": "https://i.ibb.co/gJm1LVZ/crispy-fried-chicken-plate-with-salad-carrot.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Drinks",
+    "image": "https://i.ibb.co/3r46b9X/iced-orange-cocktail-table.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Burgers",
+    "image": "https://i.ibb.co/4j029VQ/big-sandwich-hamburger-burger-with-beef-red-onion-tomato-fried-bacon.jpg"
+  }
+]
