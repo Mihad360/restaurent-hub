@@ -4,7 +4,7 @@ export default function Food({ item }) {
   const { name, id, image } = item;
   return (
     <div>
-      <div className="bg-gradient-to-b from-amber-300 to-amber-100 rounded-lg shadow-lg p-5 transform transition-transform duration-300 hover:scale-105">
+      <div className="bg-gradient-to-b from-amber-300 to-amber-100 rounded-lg shadow-lg p-5">
         <img
           className="w-52 h-64 rounded-lg object-cover mb-4"
           src={image}

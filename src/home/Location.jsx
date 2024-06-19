@@ -31,7 +31,7 @@ export default function Location() {
       </div>
       <div className="pt-16">
         <div className="flex items-center justify-center gap-6">
-          <div className="border-amber-600 border-2 p-8 space-y-2 rounded-tr-3xl rounded-bl-3xl hover:bg-amber-600 hover:text-white">
+          <div className="border-amber-600 border-2 p-8 space-y-2 rounded-tr-3xl rounded-bl-3xl hover:bg-amber-600 hover:text-white duration-300">
             <h1>
               <FaLocationDot className="mx-auto text-4xl" />
             </h1>
@@ -44,7 +44,7 @@ export default function Location() {
               View location
             </button>
           </div>
-          <div className="border-amber-600 border-2 p-8 space-y-2 rounded-tr-3xl rounded-bl-3xl hover:bg-amber-600 hover:text-white">
+          <div className="border-amber-600 border-2 p-8 space-y-2 rounded-tr-3xl rounded-bl-3xl hover:bg-amber-600 hover:text-white duration-300">
             <h1>
               <FaLocationCrosshairs className="mx-auto text-4xl" />
             </h1>
@@ -57,7 +57,7 @@ export default function Location() {
               View location
             </button>
           </div>
-          <div className="border-amber-600 border-2 p-8 space-y-2 rounded-tr-3xl rounded-bl-3xl hover:bg-amber-600 hover:text-white">
+          <div className="border-amber-600 border-2 p-8 space-y-2 rounded-tr-3xl rounded-bl-3xl hover:bg-amber-600 hover:text-white duration-300">
             <h1>
               <FaMapLocationDot className="mx-auto text-4xl" />
             </h1>
@@ -74,7 +74,7 @@ export default function Location() {
               View location
             </button>
           </div>
-          <div className="border-amber-600 border-2 p-8 space-y-2 rounded-tr-3xl rounded-bl-3xl hover:bg-amber-600 hover:text-white">
+          <div className="border-amber-600 border-2 p-8 space-y-2 rounded-tr-3xl rounded-bl-3xl hover:bg-amber-600 hover:text-white duration-300">
             <h1>
               <FaLocationArrow className="mx-auto text-4xl" />
             </h1>
