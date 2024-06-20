@@ -14,7 +14,7 @@ export default function Location() {
   };
 
   return (
-    <div className="bg-amber-50 bg-gradient-to-b from-amber-100 to-gray-100 min-h-screen">
+    <div className="bg-amber-50 bg-gradient-to-b from-amber-100 to-gray-50">
       <div className="pt-16">
         <h1 className="text-3xl font-semibold text-center tracking-wide pb-3">
           FROM THE OUTLET YOU CAN FIND OUR BEST <br />{" "}

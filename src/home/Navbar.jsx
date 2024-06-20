@@ -62,6 +62,19 @@ const Navbar = () => {
               DASHBOARD
             </NavLink>
           </li>
+          <li className="hover:text-amber-600 hover:ease-in-out hover:transition-all hover:scale-110 duration-150 hover:font-bold">
+            <NavLink
+              to="/contactus"
+              className={({ isActive, isPending }) =>
+                isPending
+                  ? "pending"
+                  : isActive
+                  ? "text-amber-600 font-bold "
+                  : ""
+              }>
+              CONTACT US
+            </NavLink>
+          </li>
         </ul>
       </div>
     </>

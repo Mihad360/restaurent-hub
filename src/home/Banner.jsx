@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
-    <div className="pt-32 pb-20">
+    <div className="pt-32 pb-20 shapedividers_com-3449">
       <div className="flex items-center justify-center gap-20">
         <div className="pt-32 w-[40%]">
           <h1 className="text-3xl uppercase font-bold text-black pb-3">
@@ -24,12 +24,13 @@ const Banner = () => {
             </button>
           </Link>
           <Link>
-            <button className="btn bg-amber-600 hover:bg-amber-400 w-40 mx-auto text-white text-base">
+            <button className="btn bg-pink-600 hover:bg-pink-400 w-40 mx-auto text-white text-base">
               Login
             </button>
           </Link>
           <div>
-            <img className="w-36 mt-20"
+            <img
+              className="w-36 mt-20"
               src="https://i.ibb.co/jZJCcBT/top-view-fresh-red-apples-mellow-fruits-dark-desk-ripe-fruit-red-fresh-removebg-preview.png"
               alt=""
             />

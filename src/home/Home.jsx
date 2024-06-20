@@ -1,6 +1,5 @@
 import Banner from "./Banner";
 import Foods from "./Foods";
-import Location from "./Location";
 import Nood from "./Nood";
 
 export default function Home() {
@@ -10,7 +9,7 @@ export default function Home() {
         <Banner></Banner>
       </div>
       <div>
-        <Location></Location>
+        {/* <Location></Location> */}
       </div>
       <div>
         <Nood></Nood>
