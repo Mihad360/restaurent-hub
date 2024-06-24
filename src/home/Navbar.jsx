@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { GiForkKnifeSpoon } from "react-icons/gi";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
@@ -83,12 +84,15 @@ const Navbar = () => {
   return (
     <div className="px-5 bg-amber-200 fixed w-full z-10 border-b-2 border-black">
       <div className="navbar flex justify-between items-center">
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-3">
           <img
-            className="w-52"
-            src="https://i.ibb.co/v4BMCzL/BCM9-150ppp-removebg-preview.png"
+            className="w-32"
+            src="https://i.ibb.co/rmm66vd/360-F-553007886-vpg-BDlw-Ay-Aa-CTABowv-Ia-PMPg437ha-VKR-removebg-preview.png"
             alt=""
           />
+          {/* <h1 className="text-5xl">
+            <GiForkKnifeSpoon />
+          </h1> */}
           <h1 className="text-3xl font-extrabold tracking-wide">
             <span className="text-amber-600">Restaura</span>Hub
           </h1>

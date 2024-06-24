@@ -2,7 +2,7 @@
 
 export default function Nood() {
   return (
-    <div>
+    <div className="bg-gradient-to-b from-gray-100 via-amber-100 to-gray-100">
       <h1 className="text-3xl text-amber-600 font-semibold text-center pt-16 pb-16">
         Special dish
       </h1>
