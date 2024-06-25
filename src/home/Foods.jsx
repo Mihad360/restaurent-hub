@@ -29,7 +29,7 @@ export default function Foods() {
   }, []);
 
   return (
-    <div>
+    <div className="max-w-7xl mx-auto">
       <h1 className="text-3xl text-amber-600 font-semibold text-center pt-16 pb-3">
         Our Categories
       </h1>
@@ -41,7 +41,7 @@ export default function Foods() {
       <div className="flex items-center justify-center gap-6">
         <div>
           <img
-            className="h-[800px] rounded-lg"
+            className="h-[800px] w-[500px] rounded-lg"
             src="https://i.ibb.co/NZTWmCj/top-view-meals-tasty-yummy-different-pastries-dishes-brown-surface.jpg"
             alt=""
           />

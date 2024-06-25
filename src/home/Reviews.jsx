@@ -2,10 +2,10 @@
 
 export default function Reviews() {
   return (
-    <div>
-      <div className="flex items-center justify-center gap-10">
+    <div className="max-w-7xl mx-auto">
+      <div className="flex items-center justify-center gap-10 pt-10">
         <div>
-          <img className="w-[1000p]"
+          <img className=""
             src="https://i.ibb.co/vx4Gbtz/overhead-view-pizza-wooden-board-with-spatula-removebg-preview.png"
             alt=""
           />
