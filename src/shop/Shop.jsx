@@ -1,3 +1,4 @@
+import Carousel from "./Carousel";
 
 
 const slides = [
@@ -12,7 +13,11 @@ export default function Shop() {
 
   return (
     <div>
-        
+      <div>
+        <div className="">
+          <Carousel slides={slides}></Carousel>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
