@@ -2,10 +2,10 @@ import Carousel from "./Carousel";
 
 
 const slides = [
-  "https://i.ibb.co/JzPqs5v/close-up-delicious-pizza.jpg",
-  "https://i.ibb.co/hfvwVBq/food-content-creator-filming-variety-dishes-upload-internet.jpg",
-  "https://i.ibb.co/J54B0bb/people-creating-food-content-upload-internet-food-lovers-1.jpg",
-  "https://i.ibb.co/0G7r62p/people-creating-food-content-upload-internet-food-lovers.jpg",
+  "https://i.ibb.co/R0crrZ6/close-up-delicious-pizza-3.png",
+  "https://i.ibb.co/SPhLP9M/food-content-creator-filming-variety-dishes-upload-internet-1.png",
+  "https://i.ibb.co/T0Fm94X/people-creating-food-content-upload-internet-food-lovers-1-1.png",
+  "https://i.ibb.co/NCDJ6hP/people-creating-food-content-upload-internet-food-lovers-2.png",
 ];
 
 export default function Shop() {
@@ -17,6 +17,7 @@ export default function Shop() {
         <div className="">
           <Carousel slides={slides}></Carousel>
         </div>
+        
       </div>
     </div>
   );

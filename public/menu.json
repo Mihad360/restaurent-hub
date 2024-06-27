@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "name": "Classic Cheeseburger",
+    "recipe": "Grill the beef patty, add cheese, lettuce, tomato, and onions, then place in a bun.",
+    "image": "https://i.ibb.co/68vS4dw/front-view-hamburger-tasty-with-green-salad-other-ingredients-inside-round-plate-dark-surface.jpg",
+    "category": "Burger",
+    "price": 5.99
+  },
+  {
+    "id": 2,
+    "name": "Margherita Pizza",
+    "recipe": "Spread tomato sauce on dough, add mozzarella cheese and basil leaves, then bake.",
+    "image": "https://i.ibb.co/JCZLdWM/vegetarian-pizza-carrot-spinach-bell-pepper-tomato-mushroom-cheese-side-view.jpg",
+    "category": "Pizza",
+    "price": 7.99
+  },
+  {
+    "id": 3,
+    "name": "Chicken Caesar Salad",
+    "recipe": "Mix romaine lettuce, grilled chicken, croutons, and Caesar dressing.",
+    "image": "https://i.ibb.co/5MqXXpG/salad-chicken-breast-with-zucchini-cherry-tomatoes.jpg",
+    "category": "Chicken",
+    "price": 6.99
+  },
+  {
+    "id": 4,
+    "name": "Tomato Basil Soup",
+    "recipe": "Simmer tomatoes, garlic, and basil in broth, then blend until smooth.",
+    "image": "https://i.ibb.co/zmL3q3P/side-view-tomato-soup-with-tomatoes-plate.jpg",
+    "category": "Soups",
+    "price": 4.99
+  },
+  {
+    "id": 5,
+    "name": "Chocolate Brownie",
+    "recipe": "Mix cocoa, flour, sugar, and eggs, then bake until fudgy.",
+    "image": "https://i.ibb.co/cJz3tjy/close-up-delicious-chocolate-cake-with-walnuts.jpg",
+    "category": "Dessert",
+    "price": 2.99
+  },
+  {
+    "id": 6,
+    "name": "Mojito",
+    "recipe": "Muddle mint leaves, lime juice, and sugar, then add soda water and rum.",
+    "image": "https://i.ibb.co/N27sFj5/green-cocktail-with-mint-ice-cubes-lemon-slice.jpg",
+    "category": "Drinks",
+    "price": 3.99
+  },
+  {
+    "id": 7,
+    "name": "Buffalo Chicken Wings",
+    "recipe": "Fry chicken wings, then toss in hot sauce and butter.",
+    "image": "https://i.ibb.co/MfYYTyh/fried-chicken-with-variety-sauces-french-fries.jpg",
+    "category": "Chicken",
+    "price": 8.99
+  },
+  {
+    "id": 8,
+    "name": "Minestrone Soup",
+    "recipe": "Cook vegetables, beans, and pasta in tomato broth.",
+    "image": "https://i.ibb.co/XWg4c6x/borsch-soup-with-dill.jpg",
+    "category": "Soups",
+    "price": 5.49
+  },
+  {
+    "id": 9,
+    "name": "Vanilla Ice Cream",
+    "recipe": "Mix cream, sugar, and vanilla extract, then churn in an ice cream maker.",
+    "image": "https://i.ibb.co/Rg2fvwm/delicious-ice-cream-cones-with-vanilla.jpg",
+    "category": "Dessert",
+    "price": 3.49
+  },
+  {
+    "id": 10,
+    "name": "Lemonade",
+    "recipe": "Mix lemon juice, water, and sugar, then chill.",
+    "image": "https://i.ibb.co/Tbv3VYd/citrus-lemonade-jug-lemon-sparkling-water-lime-ice-side-view.jpg",
+    "category": "Drinks",
+    "price": 1.99
+  },
+  {
+    "id": 11,
+    "name": "Strawberry Cheesecake",
+    "recipe": "Mix cream cheese, sugar, and eggs, pour over a graham cracker crust, top with strawberries.",
+    "image": "https://example.com/images/strawberry_cheesecake.jpg",
+    "category": "Dessert",
+    "price": 4.99
+  },
+  {
+    "id": 12,
+    "name": "Vegetarian Pizza",
+    "recipe": "Top pizza dough with tomato sauce, mozzarella, bell peppers, onions, olives, and mushrooms, then bake.",
+    "image": "https://example.com/images/vegetarian_pizza.jpg",
+    "category": "Pizza",
+    "price": 7.49
+  },
+  {
+    "id": 13,
+    "name": "Creamy Chicken Soup",
+    "recipe": "Simmer chicken, carrots, celery, and onions in broth, then add cream.",
+    "image": "https://example.com/images/creamy_chicken_soup.jpg",
+    "category": "Soups",
+    "price": 5.99
+  },
+  {
+    "id": 14,
+    "name": "Mango Smoothie",
+    "recipe": "Blend mango, yogurt, milk, and honey until smooth.",
+    "image": "https://example.com/images/mango_smoothie.jpg",
+    "category": "Drinks",
+    "price": 3.49
+  },
+  {
+    "id": 15,
+    "name": "BBQ Chicken Pizza",
+    "recipe": "Spread BBQ sauce on dough, add grilled chicken, red onions, and cheese, then bake.",
+    "image": "https://example.com/images/bbq_chicken_pizza.jpg",
+    "category": "Pizza",
+    "price": 8.49
+  },
+  {
+    "id": 16,
+    "name": "Pumpkin Pie",
+    "recipe": "Mix pumpkin puree, eggs, sugar, and spices, pour into pie crust, then bake.",
+    "image": "https://example.com/images/pumpkin_pie.jpg",
+    "category": "Dessert",
+    "price": 3.99
+  },
+  {
+    "id": 17,
+    "name": "Spicy Chicken Tacos",
+    "recipe": "Fill tortillas with spiced chicken, lettuce, cheese, and salsa.",
+    "image": "https://example.com/images/spicy_chicken_tacos.jpg",
+    "category": "Chicken",
+    "price": 6.99
+  },
+  {
+    "id": 18,
+    "name": "French Onion Soup",
+    "recipe": "Caramelize onions, deglaze with wine, add beef broth, and top with toasted bread and cheese.",
+    "image": "https://example.com/images/french_onion_soup.jpg",
+    "category": "Soups",
+    "price": 6.49
+  },
+  {
+    "id": 19,
+    "name": "Peach Cobbler",
+    "recipe": "Layer sliced peaches with sugar and flour mixture, top with dough, and bake.",
+    "image": "https://example.com/images/peach_cobbler.jpg",
+    "category": "Dessert",
+    "price": 4.49
+  },
+  {
+    "id": 20,
+    "name": "Iced Coffee",
+    "recipe": "Brew coffee, let cool, add ice, milk, and sweetener.",
+    "image": "https://example.com/images/iced_coffee.jpg",
+    "category": "Drinks",
+    "price": 2.49
+  },
+  {
+    "id": 21,
+    "name": "Grilled Chicken Sandwich",
+    "recipe": "Grill chicken breast, add lettuce, tomato, and mayo, then place in a bun.",
+    "image": "https://example.com/images/grilled_chicken_sandwich.jpg",
+    "category": "Chicken",
+    "price": 5.49
+  },
+  {
+    "id": 22,
+    "name": "Pepperoni Pizza",
+    "recipe": "Top pizza dough with tomato sauce, mozzarella, and pepperoni, then bake.",
+    "image": "https://example.com/images/pepperoni_pizza.jpg",
+    "category": "Pizza",
+    "price": 8.99
+  },
+  {
+    "id": 23,
+    "name": "Chocolate Chip Cookies",
+    "recipe": "Mix flour, sugar, butter, eggs, and chocolate chips, then bake.",
+    "image": "https://example.com/images/chocolate_chip_cookies.jpg",
+    "category": "Dessert",
+    "price": 2.99
+  },
+  {
+    "id": 24,
+    "name": "Cauliflower Soup",
+    "recipe": "Simmer cauliflower, garlic, and onions in broth, then blend until smooth.",
+    "image": "https://example.com/images/cauliflower_soup.jpg",
+    "category": "Soups",
+    "price": 4.99
+  },
+  {
+    "id": 25,
+    "name": "Strawberry Smoothie",
+    "recipe": "Blend strawberries, yogurt, milk, and honey until smooth.",
+    "image": "https://example.com/images/strawberry_smoothie.jpg",
+    "category": "Drinks",
+    "price": 3.49
+  },
+  {
+    "id": 26,
+    "name": "Spaghetti Carbonara",
+    "recipe": "Cook spaghetti, mix with eggs, cheese, pancetta, and pepper.",
+    "image": "https://example.com/images/spaghetti_carbonara.jpg",
+    "category": "Chicken",
+    "price": 7.99
+  },
+  {
+    "id": 27,
+    "name": "Vegetable Soup",
+    "recipe": "Simmer mixed vegetables in broth until tender.",
+    "image": "https://example.com/images/vegetable_soup.jpg",
+    "category": "Soups",
+    "price": 4.49
+  },
+  {
+    "id": 28,
+    "name": "Blueberry Muffins",
+    "recipe": "Mix flour, sugar, butter, eggs, and blueberries, then bake.",
+    "image": "https://example.com/images/blueberry_muffins.jpg",
+    "category": "Dessert",
+    "price": 3.49
+  },
+  {
+    "id": 29,
+    "name": "Chicken Alfredo Pizza",
+    "recipe": "Spread Alfredo sauce on dough, add grilled chicken and cheese, then bake.",
+    "image": "https://example.com/images/chicken_alfredo_pizza.jpg",
+    "category": "Pizza",
+    "price": 8.99
+  },
+  {
+    "id": 30,
+    "name": "Green Tea",
+    "recipe": "Steep green tea leaves in hot water, then strain.",
+    "image": "https://example.com/images/green_tea.jpg",
+    "category": "Drinks",
+    "price": 1.99
+  },
+  {
+    "id": 31,
+    "name": "Veggie Burger",
+    "recipe": "Grill a veggie patty, add lettuce, tomato, and onions, then place in a bun.",
+    "image": "https://example.com/images/veggie_burger.jpg",
+    "category": "Burger",
+    "price": 6.49
+  },
+  {
+    "id": 32,
+    "name": "Hawaiian Pizza",
+    "recipe": "Top pizza dough with tomato sauce, mozzarella, ham, and pineapple, then bake.",
+    "image": "https://example.com/images/hawaiian_pizza.jpg",
+    "category": "Pizza",
+    "price": 8.99
+  },
+  {
+    "id": 33,
+    "name": "Red Velvet Cake",
+    "recipe": "Mix flour, cocoa, sugar, buttermilk, eggs, and red food coloring, then bake and frost with cream cheese icing.",
+    "image": "https://example.com/images/red_velvet_cake.jpg",
+    "category": "Dessert",
+    "price": 4.99
+  },
+  {
+    "id": 34,
+    "name": "Lentil Soup",
+    "recipe": "Simmer lentils, carrots, celery, and onions in broth until tender.",
+    "image": "https://example.com/images/lentil_soup.jpg",
+    "category": "Soups",
+    "price": 4.49
+  },
+  {
+    "id": 35,
+    "name": "Piña Colada",
+    "recipe": "Blend pineapple juice, coconut milk, and rum until smooth.",
+    "image": "https://example.com/images/pina_colada.jpg",
+    "category": "Drinks",
+    "price": 5.49
+  },
+  {
+    "id": 36,
+    "name": "BBQ Ribs",
+    "recipe": "Slow-cook ribs with BBQ sauce until tender and flavorful.",
+    "image": "https://example.com/images/bbq_ribs.jpg",
+    "category": "Chicken",
+    "price": 9.99
+  },
+  {
+    "id": 37,
+    "name": "Broccoli Cheddar Soup",
+    "recipe": "Simmer broccoli and onions in broth, add cheddar cheese and blend until smooth.",
+    "image": "https://example.com/images/broccoli_cheddar_soup.jpg",
+    "category": "Soups",
+    "price": 5.49
+  },
+  {
+    "id": 38,
+    "name": "Lemon Bars",
+    "recipe": "Mix lemon juice, sugar, eggs, and flour, pour over a shortbread crust, then bake.",
+    "image": "https://example.com/images/lemon_bars.jpg",
+    "category": "Dessert",
+    "price": 3.49
+  },
+  {
+    "id": 39,
+    "name": "Chicken Fajitas",
+    "recipe": "Sauté chicken strips with bell peppers and onions, serve with tortillas.",
+    "image": "https://example.com/images/chicken_fajitas.jpg",
+    "category": "Chicken",
+    "price": 7.99
+  },
+  {
+    "id": 40,
+    "name": "Matcha Latte",
+    "recipe": "Mix matcha powder with hot water, then add steamed milk.",
+    "image": "https://example.com/images/matcha_latte.jpg",
+    "category": "Drinks",
+    "price": 4.49
+  },
+  {
+    "id": 41,
+    "name": "Beef Tacos",
+    "recipe": "Cook ground beef with taco seasoning, serve in tortillas with lettuce, cheese, and salsa.",
+    "image": "https://example.com/images/beef_tacos.jpg",
+    "category": "Chicken",
+    "price": 6.99
+  },
+  {
+    "id": 42,
+    "name": "Caprese Salad",
+    "recipe": "Layer sliced tomatoes, mozzarella, and basil, drizzle with olive oil and balsamic vinegar.",
+    "image": "https://example.com/images/caprese_salad.jpg",
+    "category": "Salad",
+    "price": 5.99
+  },
+  {
+    "id": 43,
+    "name": "Mango Sorbet",
+    "recipe": "Blend mango, sugar, and lemon juice, freeze until firm.",
+    "image": "https://example.com/images/mango_sorbet.jpg",
+    "category": "Dessert",
+    "price": 3.99
+  },
+  {
+    "id": 44,
+    "name": "Egg Drop Soup",
+    "recipe": "Simmer chicken broth, add beaten eggs while stirring, season with salt and pepper.",
+    "image": "https://example.com/images/egg_drop_soup.jpg",
+    "category": "Soups",
+    "price": 4.49
+  },
+  {
+    "id": 45,
+    "name": "Peach Iced Tea",
+    "recipe": "Brew tea, mix with peach juice, add ice, and sweeten to taste.",
+    "image": "https://example.com/images/peach_iced_tea.jpg",
+    "category": "Drinks",
+    "price": 2.99
+  },
+  {
+    "id": 46,
+    "name": "Spicy Chicken Wings",
+    "recipe": "Fry chicken wings, coat with hot sauce and butter.",
+    "image": "https://example.com/images/spicy_chicken_wings.jpg",
+    "category": "Chicken",
+    "price": 8.99
+  },
+  {
+    "id": 47,
+    "name": "Chicken Noodle Soup",
+    "recipe": "Simmer chicken, noodles, carrots, and celery in broth.",
+    "image": "https://example.com/images/chicken_noodle_soup.jpg",
+    "category": "Soups",
+    "price": 5.99
+  },
+  {
+    "id": 48,
+    "name": "Chocolate Mousse",
+    "recipe": "Mix melted chocolate, whipped cream, and eggs, chill until set.",
+    "image": "https://example.com/images/chocolate_mousse.jpg",
+    "category": "Dessert",
+    "price": 4.49
+  },
+  {
+    "id": 49,
+    "name": "Caesar Salad",
+    "recipe": "Toss romaine lettuce with Caesar dressing, croutons, and parmesan cheese.",
+    "image": "https://example.com/images/caesar_salad.jpg",
+    "category": "Salad",
+    "price": 5.49
+  },
+  {
+    "id": 50,
+    "name": "Espresso",
+    "recipe": "Brew finely ground coffee beans with hot water under pressure.",
+    "image": "https://example.com/images/espresso.jpg",
+    "category": "Drinks",
+    "price": 2.49
+  }
+]

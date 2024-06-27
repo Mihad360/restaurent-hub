@@ -45,10 +45,12 @@ export default function Carousel({ slides, autoplayInterval = 3000 }) {
       <div className="absolute flex justify-between items-center top-0 w-full h-full px-10 pt-20">
         <button
           onClick={previousSlide}
-          className="text-white text-2xl opacity-50">
+          className="text-white text-3xl opacity-70 bg-gray-100 p-2 rounded-full bg-opacity-30 hover:scale-110 transition-all duration-300 ease-in-out">
           <FaCircleArrowLeft />
         </button>
-        <button onClick={nextSlide} className="text-white text-2xl opacity-50">
+        <button
+          onClick={nextSlide}
+          className="text-white text-3xl opacity-70 bg-gray-100 p-2 rounded-full bg-opacity-30 hover:scale-110 transition-all duration-300 ease-in-out">
           <FaCircleArrowRight />
         </button>
       </div>
