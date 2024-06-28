@@ -323,7 +323,7 @@
     "id": 41,
     "name": "Beef Tacos",
     "recipe": "Cook ground beef with taco seasoning, serve in tortillas with lettuce, cheese, and salsa.",
-    "image": "https://example.com/images/beef_tacos.jpg",
+    "image": "https://i.ibb.co/BcYPKcv/Ground-Beef-Tacos-26-2-735x927.jpg",
     "category": "Chicken",
     "price": 6.99
   },
@@ -331,7 +331,7 @@
     "id": 42,
     "name": "Caprese Salad",
     "recipe": "Layer sliced tomatoes, mozzarella, and basil, drizzle with olive oil and balsamic vinegar.",
-    "image": "https://example.com/images/caprese_salad.jpg",
+    "image": "https://i.ibb.co/LJ84VNp/Caprese-Salad-7b.jpg",
     "category": "Salad",
     "price": 5.99
   },
@@ -339,7 +339,7 @@
     "id": 43,
     "name": "Mango Sorbet",
     "recipe": "Blend mango, sugar, and lemon juice, freeze until firm.",
-    "image": "https://example.com/images/mango_sorbet.jpg",
+    "image": "https://i.ibb.co/p2wSTkK/Mango-Sorbet-010.webp",
     "category": "Dessert",
     "price": 3.99
   },
@@ -347,7 +347,7 @@
     "id": 44,
     "name": "Egg Drop Soup",
     "recipe": "Simmer chicken broth, add beaten eggs while stirring, season with salt and pepper.",
-    "image": "https://example.com/images/egg_drop_soup.jpg",
+    "image": "https://i.ibb.co/crHMbJY/egg-drop-soup-4.jpg",
     "category": "Soups",
     "price": 4.49
   },
@@ -355,7 +355,7 @@
     "id": 45,
     "name": "Peach Iced Tea",
     "recipe": "Brew tea, mix with peach juice, add ice, and sweeten to taste.",
-    "image": "https://example.com/images/peach_iced_tea.jpg",
+    "image": "https://i.ibb.co/RDzLpfN/PERFECT-Peach-Iced-Tea-So-easy-summery-and-perfect-for-sipping-by-the-pool.jpg",
     "category": "Drinks",
     "price": 2.99
   },
@@ -363,7 +363,7 @@
     "id": 46,
     "name": "Spicy Chicken Wings",
     "recipe": "Fry chicken wings, coat with hot sauce and butter.",
-    "image": "https://example.com/images/spicy_chicken_wings.jpg",
+    "image": "https://i.ibb.co/jgPfxKv/images.jpg",
     "category": "Chicken",
     "price": 8.99
   },
@@ -371,7 +371,7 @@
     "id": 47,
     "name": "Chicken Noodle Soup",
     "recipe": "Simmer chicken, noodles, carrots, and celery in broth.",
-    "image": "https://example.com/images/chicken_noodle_soup.jpg",
+    "image": "https://i.ibb.co/z2Pfbsm/Chicken-Noodle-Soup-2.jpg",
     "category": "Soups",
     "price": 5.99
   },
@@ -379,7 +379,7 @@
     "id": 48,
     "name": "Chocolate Mousse",
     "recipe": "Mix melted chocolate, whipped cream, and eggs, chill until set.",
-    "image": "https://example.com/images/chocolate_mousse.jpg",
+    "image": "https://i.ibb.co/4jBKybH/Chocolate-Mousse-9.webp",
     "category": "Dessert",
     "price": 4.49
   },
@@ -387,7 +387,7 @@
     "id": 49,
     "name": "Caesar Salad",
     "recipe": "Toss romaine lettuce with Caesar dressing, croutons, and parmesan cheese.",
-    "image": "https://example.com/images/caesar_salad.jpg",
+    "image": "https://i.ibb.co/rxMMc8r/classic-caesar-salad.jpg",
     "category": "Salad",
     "price": 5.49
   },
@@ -395,7 +395,7 @@
     "id": 50,
     "name": "Espresso",
     "recipe": "Brew finely ground coffee beans with hot water under pressure.",
-    "image": "https://example.com/images/espresso.jpg",
+    "image": "https://i.ibb.co/pRJqGkw/How-Are-Espressos-Good-For-Health-blog-lower-1-1200x1200.png",
     "category": "Drinks",
     "price": 2.49
   }
