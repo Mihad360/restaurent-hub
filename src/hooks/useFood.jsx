@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import useaxiospublic from "./useaxiospublic";
 
-const useMenu = () => {
+const useFood = () => {
   // const [menu, setMenu] = useState([])
   // const [loading, setLoading] = useState(true)
 
@@ -32,4 +32,4 @@ const useMenu = () => {
   return [menu, loading, refetch];
 };
 
-export default useMenu;
+export default useFood;

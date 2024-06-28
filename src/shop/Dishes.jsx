@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+import useFood from "../hooks/useFood";
 
 export default function Dishes() {
 
   const [tabindex, setTabindex] = useState(0)
-
-  
+  const [food] = useFood()
+  console.log(food)
 
   return (
     <div>
