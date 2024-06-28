@@ -83,7 +83,7 @@
     "id": 11,
     "name": "Strawberry Cheesecake",
     "recipe": "Mix cream cheese, sugar, and eggs, pour over a graham cracker crust, top with strawberries.",
-    "image": "https://example.com/images/strawberry_cheesecake.jpg",
+    "image": "https://i.ibb.co/xCMPGKj/fresh-raspberry-cheesecake.jpg",
     "category": "Dessert",
     "price": 4.99
   },
@@ -91,7 +91,7 @@
     "id": 12,
     "name": "Vegetarian Pizza",
     "recipe": "Top pizza dough with tomato sauce, mozzarella, bell peppers, onions, olives, and mushrooms, then bake.",
-    "image": "https://example.com/images/vegetarian_pizza.jpg",
+    "image": "https://i.ibb.co/g4g4sQp/pizza-with-tomatoes-basil-table.jpg",
     "category": "Pizza",
     "price": 7.49
   },
@@ -99,7 +99,7 @@
     "id": 13,
     "name": "Creamy Chicken Soup",
     "recipe": "Simmer chicken, carrots, celery, and onions in broth, then add cream.",
-    "image": "https://example.com/images/creamy_chicken_soup.jpg",
+    "image": "https://i.ibb.co/S3BRwZF/Creamy-Tuscan-Chicken-Soup-3.jpg",
     "category": "Soups",
     "price": 5.99
   },
@@ -107,7 +107,7 @@
     "id": 14,
     "name": "Mango Smoothie",
     "recipe": "Blend mango, yogurt, milk, and honey until smooth.",
-    "image": "https://example.com/images/mango_smoothie.jpg",
+    "image": "https://i.ibb.co/m5c2CqG/mango-smoothie-3-500x500.webp",
     "category": "Drinks",
     "price": 3.49
   },
@@ -115,7 +115,7 @@
     "id": 15,
     "name": "BBQ Chicken Pizza",
     "recipe": "Spread BBQ sauce on dough, add grilled chicken, red onions, and cheese, then bake.",
-    "image": "https://example.com/images/bbq_chicken_pizza.jpg",
+    "image": "https://i.ibb.co/r30RC3M/bbq-pizza-318-1547837614.jpg",
     "category": "Pizza",
     "price": 8.49
   },
@@ -123,7 +123,7 @@
     "id": 16,
     "name": "Pumpkin Pie",
     "recipe": "Mix pumpkin puree, eggs, sugar, and spices, pour into pie crust, then bake.",
-    "image": "https://example.com/images/pumpkin_pie.jpg",
+    "image": "https://i.ibb.co/cxq5BTG/Pumpkin-Pie-2.jpg",
     "category": "Dessert",
     "price": 3.99
   },
@@ -131,7 +131,7 @@
     "id": 17,
     "name": "Spicy Chicken Tacos",
     "recipe": "Fill tortillas with spiced chicken, lettuce, cheese, and salsa.",
-    "image": "https://example.com/images/spicy_chicken_tacos.jpg",
+    "image": "https://i.ibb.co/8sxfCbN/Sriracha-Chicken-Tacos-2.webp",
     "category": "Chicken",
     "price": 6.99
   },
@@ -139,7 +139,7 @@
     "id": 18,
     "name": "French Onion Soup",
     "recipe": "Caramelize onions, deglaze with wine, add beef broth, and top with toasted bread and cheese.",
-    "image": "https://example.com/images/french_onion_soup.jpg",
+    "image": "https://i.ibb.co/q1dFVG2/French-Onion-Soup-Recipe.jpg",
     "category": "Soups",
     "price": 6.49
   },
@@ -147,7 +147,7 @@
     "id": 19,
     "name": "Peach Cobbler",
     "recipe": "Layer sliced peaches with sugar and flour mixture, top with dough, and bake.",
-    "image": "https://example.com/images/peach_cobbler.jpg",
+    "image": "https://i.ibb.co/hLLMy9W/008.jpg",
     "category": "Dessert",
     "price": 4.49
   },
@@ -155,7 +155,7 @@
     "id": 20,
     "name": "Iced Coffee",
     "recipe": "Brew coffee, let cool, add ice, milk, and sweetener.",
-    "image": "https://example.com/images/iced_coffee.jpg",
+    "image": "https://i.ibb.co/z2WqyXN/coldbrew-iced-latte-with-my-recipe-photo-by-ellamiller-photo-f1e3d9e.jpg",
     "category": "Drinks",
     "price": 2.49
   },
@@ -163,7 +163,7 @@
     "id": 21,
     "name": "Grilled Chicken Sandwich",
     "recipe": "Grill chicken breast, add lettuce, tomato, and mayo, then place in a bun.",
-    "image": "https://example.com/images/grilled_chicken_sandwich.jpg",
+    "image": "https://i.ibb.co/MNZ7bLW/thumbnail-Chick-Fil-A-Grilled-Chicken-Club-500x375.jpg",
     "category": "Chicken",
     "price": 5.49
   },
@@ -171,7 +171,7 @@
     "id": 22,
     "name": "Pepperoni Pizza",
     "recipe": "Top pizza dough with tomato sauce, mozzarella, and pepperoni, then bake.",
-    "image": "https://example.com/images/pepperoni_pizza.jpg",
+    "image": "https://i.ibb.co/Trb06K2/pepperoni-pizza6-srgb.jpg",
     "category": "Pizza",
     "price": 8.99
   },
@@ -179,7 +179,7 @@
     "id": 23,
     "name": "Chocolate Chip Cookies",
     "recipe": "Mix flour, sugar, butter, eggs, and chocolate chips, then bake.",
-    "image": "https://example.com/images/chocolate_chip_cookies.jpg",
+    "image": "https://i.ibb.co/MGv7xfh/Soft-Chocolate-Chip-Cookies-3.webp",
     "category": "Dessert",
     "price": 2.99
   },
@@ -187,7 +187,7 @@
     "id": 24,
     "name": "Cauliflower Soup",
     "recipe": "Simmer cauliflower, garlic, and onions in broth, then blend until smooth.",
-    "image": "https://example.com/images/cauliflower_soup.jpg",
+    "image": "https://i.ibb.co/Qk1FmPh/roasted-cauliflower-soup-2sm-1-1-500x500.webp",
     "category": "Soups",
     "price": 4.99
   },
@@ -195,7 +195,7 @@
     "id": 25,
     "name": "Strawberry Smoothie",
     "recipe": "Blend strawberries, yogurt, milk, and honey until smooth.",
-    "image": "https://example.com/images/strawberry_smoothie.jpg",
+    "image": "https://i.ibb.co/j4dJQFk/strawberry-smoothie-www.webp",
     "category": "Drinks",
     "price": 3.49
   },
@@ -203,7 +203,7 @@
     "id": 26,
     "name": "Spaghetti Carbonara",
     "recipe": "Cook spaghetti, mix with eggs, cheese, pancetta, and pepper.",
-    "image": "https://example.com/images/spaghetti_carbonara.jpg",
+    "image": "https://i.ibb.co/thWkHHB/carbonara-horizontal-square640-v2.jpg",
     "category": "Chicken",
     "price": 7.99
   },
@@ -211,7 +211,7 @@
     "id": 27,
     "name": "Vegetable Soup",
     "recipe": "Simmer mixed vegetables in broth until tender.",
-    "image": "https://example.com/images/vegetable_soup.jpg",
+    "image": "https://i.ibb.co/KGXpTyx/Creamy-Chicken-Vegetable-Soup-2.jpg",
     "category": "Soups",
     "price": 4.49
   },
@@ -219,7 +219,7 @@
     "id": 28,
     "name": "Blueberry Muffins",
     "recipe": "Mix flour, sugar, butter, eggs, and blueberries, then bake.",
-    "image": "https://example.com/images/blueberry_muffins.jpg",
+    "image": "https://i.ibb.co/YXrtGJW/Best-Blueberry-Muffins-Recipe-1-of-1.jpg",
     "category": "Dessert",
     "price": 3.49
   },
@@ -227,7 +227,7 @@
     "id": 29,
     "name": "Chicken Alfredo Pizza",
     "recipe": "Spread Alfredo sauce on dough, add grilled chicken and cheese, then bake.",
-    "image": "https://example.com/images/chicken_alfredo_pizza.jpg",
+    "image": "https://i.ibb.co/2t0PwBb/chicken-alfredo-pizza-photographs-735x1065.jpg",
     "category": "Pizza",
     "price": 8.99
   },
@@ -235,7 +235,7 @@
     "id": 30,
     "name": "Green Tea",
     "recipe": "Steep green tea leaves in hot water, then strain.",
-    "image": "https://example.com/images/green_tea.jpg",
+    "image": "https://i.ibb.co/0j3NcwC/5f88a9bc9e9fe400190099cf.webp",
     "category": "Drinks",
     "price": 1.99
   },
@@ -243,7 +243,7 @@
     "id": 31,
     "name": "Veggie Burger",
     "recipe": "Grill a veggie patty, add lettuce, tomato, and onions, then place in a bun.",
-    "image": "https://example.com/images/veggie_burger.jpg",
+    "image": "https://i.ibb.co/BGw3Tby/Black-Bean-Burgers-33-500x500.jpg",
     "category": "Burger",
     "price": 6.49
   },
@@ -251,7 +251,7 @@
     "id": 32,
     "name": "Hawaiian Pizza",
     "recipe": "Top pizza dough with tomato sauce, mozzarella, ham, and pineapple, then bake.",
-    "image": "https://example.com/images/hawaiian_pizza.jpg",
+    "image": "https://i.ibb.co/9nnfMCH/hawaiian-pizza-secondary-65f4641f046ed.jpg",
     "category": "Pizza",
     "price": 8.99
   },
@@ -259,7 +259,7 @@
     "id": 33,
     "name": "Red Velvet Cake",
     "recipe": "Mix flour, cocoa, sugar, buttermilk, eggs, and red food coloring, then bake and frost with cream cheese icing.",
-    "image": "https://example.com/images/red_velvet_cake.jpg",
+    "image": "https://i.ibb.co/bB1TwzQ/vegan-red-velvet-cake-1-500x500.jpg",
     "category": "Dessert",
     "price": 4.99
   },
@@ -267,7 +267,7 @@
     "id": 34,
     "name": "Lentil Soup",
     "recipe": "Simmer lentils, carrots, celery, and onions in broth until tender.",
-    "image": "https://example.com/images/lentil_soup.jpg",
+    "image": "https://i.ibb.co/kGHm0ng/IMG-7741-500x500.jpg",
     "category": "Soups",
     "price": 4.49
   },
@@ -275,7 +275,7 @@
     "id": 35,
     "name": "Piña Colada",
     "recipe": "Blend pineapple juice, coconut milk, and rum until smooth.",
-    "image": "https://example.com/images/pina_colada.jpg",
+    "image": "https://i.ibb.co/p3ZpWqR/Pina-Colada-4.jpg",
     "category": "Drinks",
     "price": 5.49
   },
@@ -283,7 +283,7 @@
     "id": 36,
     "name": "BBQ Ribs",
     "recipe": "Slow-cook ribs with BBQ sauce until tender and flavorful.",
-    "image": "https://example.com/images/bbq_ribs.jpg",
+    "image": "https://i.ibb.co/bNGSd9g/20230702031038-andy-20cooks-20-20bbq-20pork-20ribs.webp",
     "category": "Chicken",
     "price": 9.99
   },
@@ -291,7 +291,7 @@
     "id": 37,
     "name": "Broccoli Cheddar Soup",
     "recipe": "Simmer broccoli and onions in broth, add cheddar cheese and blend until smooth.",
-    "image": "https://example.com/images/broccoli_cheddar_soup.jpg",
+    "image": "https://i.ibb.co/JtfcXYZ/Broccoli-Cheddar-Soup-Recipe-1-of-1-2.jpg",
     "category": "Soups",
     "price": 5.49
   },
@@ -299,7 +299,7 @@
     "id": 38,
     "name": "Lemon Bars",
     "recipe": "Mix lemon juice, sugar, eggs, and flour, pour over a shortbread crust, then bake.",
-    "image": "https://example.com/images/lemon_bars.jpg",
+    "image": "https://i.ibb.co/qJJm2X0/images.jpg",
     "category": "Dessert",
     "price": 3.49
   },
@@ -307,7 +307,7 @@
     "id": 39,
     "name": "Chicken Fajitas",
     "recipe": "Sauté chicken strips with bell peppers and onions, serve with tortillas.",
-    "image": "https://example.com/images/chicken_fajitas.jpg",
+    "image": "https://i.ibb.co/QYnKrJn/chicken-fajitas-98151-1.jpg",
     "category": "Chicken",
     "price": 7.99
   },
@@ -315,7 +315,7 @@
     "id": 40,
     "name": "Matcha Latte",
     "recipe": "Mix matcha powder with hot water, then add steamed milk.",
-    "image": "https://example.com/images/matcha_latte.jpg",
+    "image": "https://i.ibb.co/16mkQMt/matcha-latte-7-square-500x500.jpg",
     "category": "Drinks",
     "price": 4.49
   },
