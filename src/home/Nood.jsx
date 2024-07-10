@@ -12,7 +12,7 @@ export default function Nood() {
             <div className="w-[500px] h-[500px]">
               <img
                 className="w-full h-full object-cover rounded-full"
-                src="https://i.ibb.co/gtgdVZW/close-up-delicious-chicken-meal.jpg"
+                src="https://i.ibb.co/yqPxD3p/honey-chicken-meal-prep-5-1024x683-1.jpg"
                 alt="Delicious Chicken Meal"
               />
             </div>

@@ -42,7 +42,7 @@ export default function Foods() {
         <div>
           <img
             className="h-[800px] w-[500px] rounded-lg"
-            src="https://i.ibb.co/NZTWmCj/top-view-meals-tasty-yummy-different-pastries-dishes-brown-surface.jpg"
+            src="https://i.ibb.co/F8zDQVP/top-view-meals-tasty-yummy-different-pastries-dishes-brown-surface-140725-14554.jpg"
             alt=""
           />
         </div>
