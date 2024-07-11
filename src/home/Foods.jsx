@@ -2,31 +2,32 @@ import { useEffect, useState } from "react";
 import Food from "./Food";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import useaxiospublic from "../hooks/useaxiospublic";
 
 export default function Foods() {
   const [food, setFood] = useState([]);
-  const [loading, setLoading] = useState(false); // Start with loading false
+  const [loading, setLoading] = useState(false);
+  const axiosPublic = useaxiospublic();
 
   useEffect(() => {
     // Simulate delayed data fetching after component mounts
     const delay = setTimeout(() => {
       setLoading(true); // Show skeleton loading state after delay
 
-      fetch("/foods.json")
-        .then((res) => res.json())
-        .then((data) => {
-          setFood(data);
+      axiosPublic.get('/food')
+        .then((response) => {
+          setFood(response.data);
           setLoading(false); // Hide skeleton loading state once data is fetched
         })
         .catch((error) => {
-          console.error("Error fetching data:", error);
+          console.error('Error fetching data:', error);
           setLoading(false); // Set loading to false on error to ensure skeleton UI disappears
         });
     }, 1500); // Simulated delay of 1.5 seconds (1500 milliseconds)
 
     // Cleanup function to clear timeout
     return () => clearTimeout(delay);
-  }, []);
+  }, [axiosPublic]);
 
   return (
     <div className="max-w-7xl mx-auto">
@@ -52,8 +53,10 @@ export default function Foods() {
               {[...Array(6)].map((_, index) => (
                 <div
                   key={index}
-                  className="bg-gray-300 rounded-lg shadow-lg p-5">
-                  <Skeleton height={300} />
+                  className="bg-gray-300 rounded-lg shadow-lg p-5 w-[300px] h-[300px]"> {/* Adjusted width and height */}
+                  <SkeletonTheme color="#bbb" highlightColor="#ccc">
+                    <Skeleton width="100%" height="100%" /> {/* Adjusted Skeleton size */}
+                  </SkeletonTheme>
                 </div>
               ))}
             </div>
