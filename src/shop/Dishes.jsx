@@ -1,14 +1,34 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-// import "../styles/custom-react-tabs.css";  // Adjust the path as necessary
-import useFood from "../hooks/useFood";
 import Dishcard from "./Dishcard";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import useaxiospublic from "../hooks/useaxiospublic";
 
 export default function Dishes() {
+  
   const [tabindex, setTabindex] = useState(0);
-  const [food] = useFood();
-  console.log(food);
+  const [food, setFood] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const axiosPublic = useaxiospublic(); // Assuming useaxiospublic hook is correctly implemented
+
+  useEffect(() => {
+    const delay = setTimeout(() => {
+      setLoading(true); // Show skeleton loading state after delay
+
+      axiosPublic.get('/menu')
+        .then((response) => {
+          setFood(response.data);
+          setLoading(false); // Hide skeleton loading state once data is fetched
+        })
+        .catch((error) => {
+          console.error('Error fetching data:', error);
+          setLoading(false); // Set loading to false on error to ensure skeleton UI disappears
+        });
+    }, 2000); // Simulated delay of 1.5 seconds (1500 milliseconds)
+
+    return () => clearTimeout(delay); // Cleanup function to clear timeout
+  }, [axiosPublic]);
 
   const desserts = food.filter((item) => item.category === "Dessert");
   const soups = food.filter((item) => item.category === "Soups");
@@ -51,67 +71,179 @@ export default function Dishes() {
               </Tab>
             </TabList>
             <TabPanel>
-              <div className="flex justify-center pt-16">
+              {
+                loading ? (
+            <div className="flex justify-center my-16">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[...Array(9)].map((_, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-300 rounded-lg shadow-lg p-5 w-[400px] h-[400px]"> {/* Adjusted width and height */}
+                  <SkeletonTheme color="#bbb" highlightColor="#ccc">
+                    <Skeleton width="100%" height="100%" /> {/* Adjusted Skeleton size */}
+                  </SkeletonTheme>
+                </div>
+              ))}
+            </div>
+            </div>
+          )  : <div className="flex justify-center pt-16">
                 <div className="grid grid-cols-3 gap-10">
                   {desserts.map((item) => (
                     <Dishcard key={item.id} item={item}></Dishcard>
                   ))}
                 </div>
               </div>
+              }
             </TabPanel>
             <TabPanel>
-              <div className="flex justify-center pt-16">
+              {
+                loading ? (
+            <div className="flex justify-center my-16">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[...Array(9)].map((_, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-300 rounded-lg shadow-lg p-5 w-[400px] h-[400px]"> {/* Adjusted width and height */}
+                  <SkeletonTheme color="#bbb" highlightColor="#ccc">
+                    <Skeleton width="100%" height="100%" /> {/* Adjusted Skeleton size */}
+                  </SkeletonTheme>
+                </div>
+              ))}
+            </div>
+            </div>
+          )  : <div className="flex justify-center pt-16">
                 <div className="grid grid-cols-3 gap-10">
                   {soups.map((item) => (
                     <Dishcard key={item.id} item={item}></Dishcard>
                   ))}
                 </div>
               </div>
+              }
             </TabPanel>
             <TabPanel>
-              <div className="flex justify-center pt-16">
+              {
+                loading ? (
+            <div className="flex justify-center my-16">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[...Array(9)].map((_, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-300 rounded-lg shadow-lg p-5 w-[400px] h-[400px]"> {/* Adjusted width and height */}
+                  <SkeletonTheme color="#bbb" highlightColor="#ccc">
+                    <Skeleton width="100%" height="100%" /> {/* Adjusted Skeleton size */}
+                  </SkeletonTheme>
+                </div>
+              ))}
+            </div>
+            </div>
+          )  : <div className="flex justify-center pt-16">
                 <div className="grid grid-cols-3 gap-10">
                   {pizzas.map((item) => (
                     <Dishcard key={item.id} item={item}></Dishcard>
                   ))}
                 </div>
               </div>
+              }
             </TabPanel>
             <TabPanel>
-              <div className="flex justify-center pt-16">
+              {
+                loading ? (
+            <div className="flex justify-center my-16">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[...Array(9)].map((_, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-300 rounded-lg shadow-lg p-5 w-[400px] h-[400px]"> {/* Adjusted width and height */}
+                  <SkeletonTheme color="#bbb" highlightColor="#ccc">
+                    <Skeleton width="100%" height="100%" /> {/* Adjusted Skeleton size */}
+                  </SkeletonTheme>
+                </div>
+              ))}
+            </div>
+            </div>
+          )  : <div className="flex justify-center pt-16">
                 <div className="grid grid-cols-3 gap-10">
                   {chickens.map((item) => (
                     <Dishcard key={item.id} item={item}></Dishcard>
                   ))}
                 </div>
               </div>
+              }
             </TabPanel>
             <TabPanel>
-              <div className="flex justify-center pt-16">
+              {
+                loading ? (
+            <div className="flex justify-center my-16">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[...Array(9)].map((_, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-300 rounded-lg shadow-lg p-5 w-[400px] h-[400px]"> {/* Adjusted width and height */}
+                  <SkeletonTheme color="#bbb" highlightColor="#ccc">
+                    <Skeleton width="100%" height="100%" /> {/* Adjusted Skeleton size */}
+                  </SkeletonTheme>
+                </div>
+              ))}
+            </div>
+            </div>
+          )  : <div className="flex justify-center pt-16">
                 <div className="grid grid-cols-3 gap-10">
                   {drinks.map((item) => (
                     <Dishcard key={item.id} item={item}></Dishcard>
                   ))}
                 </div>
               </div>
+              }
             </TabPanel>
             <TabPanel>
-              <div className="flex justify-center pt-16">
+              {
+                loading ? (
+            <div className="flex justify-center my-16">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[...Array(9)].map((_, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-300 rounded-lg shadow-lg p-5 w-[400px] h-[400px]"> {/* Adjusted width and height */}
+                  <SkeletonTheme color="#bbb" highlightColor="#ccc">
+                    <Skeleton width="100%" height="100%" /> {/* Adjusted Skeleton size */}
+                  </SkeletonTheme>
+                </div>
+              ))}
+            </div>
+            </div>
+          )  : <div className="flex justify-center pt-16">
                 <div className="grid grid-cols-3 gap-10">
                   {burgers.map((item) => (
                     <Dishcard key={item.id} item={item}></Dishcard>
                   ))}
                 </div>
               </div>
+              }
             </TabPanel>
             <TabPanel>
-              <div className="flex justify-center pt-16">
+              {
+                loading ? (
+            <div className="flex justify-center my-16">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[...Array(9)].map((_, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-300 rounded-lg shadow-lg p-5 w-[400px] h-[400px]"> {/* Adjusted width and height */}
+                  <SkeletonTheme color="#bbb" highlightColor="#ccc">
+                    <Skeleton width="100%" height="100%" /> {/* Adjusted Skeleton size */}
+                  </SkeletonTheme>
+                </div>
+              ))}
+            </div>
+            </div>
+          )  : <div className="flex justify-center pt-16">
                 <div className="grid grid-cols-3 gap-10">
                   {salads.map((item) => (
                     <Dishcard key={item.id} item={item}></Dishcard>
                   ))}
                 </div>
               </div>
+              }
             </TabPanel>
           </Tabs>
         </div>

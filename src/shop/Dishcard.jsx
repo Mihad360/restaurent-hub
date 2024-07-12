@@ -1,7 +1,10 @@
+import { useState } from "react";
 
 export default function Dishcard({item}) {
 
   const {name,id,image,recipe,price} = item
+  const [loading, setLoading] = useState(true);
+  
 
   return (
     <div>
