@@ -3,6 +3,14 @@ import { Link } from "react-router-dom";
 
 const Login = () => {
 
+  const handlesubmit = (event) => {
+    event.preventDefault()
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(email, password)
+  }
+
   return (
     <div className="pt-10">
       <div className="hero shapedividers_com-332 bg-gradient-to-r from-amber-100 via-gray-100 to-amber-100 min-h-screen">
@@ -14,32 +22,39 @@ const Login = () => {
             />
           </div>
           <div className="card  shrink-0 border-2 border-amber-400">
-            <form className="card-body">
+            <form onSubmit={handlesubmit} className="card-body">
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Email</span>
+                  <span className="label-text text-base text-black">Email</span>
                 </label>
                 <input
                   type="email"
+                  name="email"
                   placeholder="email"
-                  className="input input-bordered w-96"
+                  className="outline-none px-3 py-2 rounded-lg border-2 border-amber-300 w-96"
                   required
                 />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Password</span>
+                  <span className="label-text text-base text-black">
+                    Password
+                  </span>
                 </label>
                 <input
                   type="password"
+                  name="password"
                   placeholder="password"
-                  className="input input-bordered w-96"
+                  className="outline-none px-3 py-2 rounded-lg border-2 border-amber-300 w-96"
                   required
                 />
                 <label className="label">
                   <p className="text-base">
                     Don't Have An Account? Please{" "}
-                    <Link className="text-amber-600 font-bold cursor-pointer">
+                    <Link
+                      to="/signup"
+                      className="text-amber-600 font-bold cursor-pointer"
+                    >
                       Sign Up...
                     </Link>
                   </p>
