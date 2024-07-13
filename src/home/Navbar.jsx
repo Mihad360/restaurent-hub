@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { GiForkKnifeSpoon } from "react-icons/gi";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [showNotificationDropdown, setShowNotificationDropdown] =
@@ -101,7 +101,7 @@ const Navbar = () => {
           <div className="flex-1 flex justify-center">{links}</div>
           <div className="flex items-center">
             {/* Notification dropdown */}
-            <div className="dropdown dropdown-end relative">
+            <div className="dropdown dropdown-end relative mr-3">
               <button
                 tabIndex={0}
                 role="button"
@@ -139,9 +139,11 @@ const Navbar = () => {
                 </div>
               )}
             </div>
-
+            <Link to='/login'>
+              <button className="text-black ml-3">Login</button>
+            </Link>
             {/* User profile dropdown */}
-            <div className="dropdown dropdown-end ml-4 relative">
+            <div className="dropdown dropdown-end ml-2 relative">
               <button
                 tabIndex={0}
                 role="button"
@@ -173,7 +175,7 @@ const Navbar = () => {
                   <li className="p-2 hover:scale-110 duration-300 ease-in-out transition-all">
                     <a className="flex items-center justify-between text-lg">
                       <span>Profile</span>
-                      <span className="badge bg-pink-600 text-white">New</span>
+                      <span className="badge bg-pink-600 text-white">Login</span>
                     </a>
                   </li>
                   <hr />
@@ -182,7 +184,7 @@ const Navbar = () => {
                   </li>
                   <hr />
                   <li className="p-2 hover:scale-110 duration-300 ease-in-out transition-all">
-                    <a className="block text-lg">Logout</a>
+                    <a className="block text-lg">Login</a>
                   </li>
                 </ul>
               )}
