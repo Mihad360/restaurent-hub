@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
+import { Authcontext } from "../providers/Authprovider";
 
 const Login = () => {
+
+  const {signin} = useContext(Authcontext)
 
   const handlesubmit = (event) => {
     event.preventDefault()
@@ -9,6 +13,12 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password)
+
+    signin (email, password)
+    .then(result => {
+      const user = result.user;
+      console.log(user)
+    })
   }
 
   return (
@@ -53,7 +63,7 @@ const Login = () => {
                     Don't Have An Account? Please{" "}
                     <Link
                       to="/signup"
-                      className="text-amber-600 font-bold cursor-pointer"
+                      className="text-rose-600 font-bold cursor-pointer"
                     >
                       Sign Up...
                     </Link>

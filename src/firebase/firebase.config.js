@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyD1SzaSZ6D_XihflrgLqWDLTswfyBdN9gQ",
-  authDomain: "restaurahub.firebaseapp.com",
-  projectId: "restaurahub",
-  storageBucket: "restaurahub.appspot.com",
-  messagingSenderId: "231359045971",
-  appId: "1:231359045971:web:58a5fdfe899ab72b7241a6"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId
 };
 
 // Initialize Firebase
