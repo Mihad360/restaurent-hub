@@ -1,6 +1,27 @@
+import { useContext } from "react";
+import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { Authcontext } from "../providers/Authprovider";
 
 const Signup = () => {
+
+  const {createuser} = useContext(Authcontext)
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data)
+    createuser(data.email, data.password)
+    .then(result => {
+      const signup = result.user;
+      console.log(signup)
+    })
+  };
+
   return (
     <div>
       <div className="pt-10">
@@ -13,7 +34,7 @@ const Signup = () => {
               />
             </div>
             <div className="card  shrink-0 border-2 border-amber-400">
-              <form className="card-body">
+              <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text text-black text-base">
@@ -22,7 +43,7 @@ const Signup = () => {
                   </label>
                   <input
                     type="text"
-                    name="name"
+                    {...register("name")}
                     placeholder="your Name"
                     className="outline-none px-3 py-2 rounded-lg border-2 border-amber-300 w-96"
                     required
@@ -36,7 +57,7 @@ const Signup = () => {
                   </label>
                   <input
                     type="email"
-                    name="email"
+                    {...register("email")}
                     placeholder="email"
                     className="outline-none px-3 py-2 rounded-lg border-2 border-amber-300 w-96"
                     required
@@ -50,11 +71,20 @@ const Signup = () => {
                   </label>
                   <input
                     type="password"
-                    name="password"
+                    {...register("password", {
+                      pattern: /^(?=.*[A-Z]).{6,}$/,
+                    })}
                     placeholder="password"
                     className="outline-none px-3 py-2 rounded-lg border-2 border-amber-300 w-96"
                     required
                   />
+                  <div className="py-1">
+                    {errors.password?.type === "pattern" && (
+                      <p className="text-red-600">
+                        Password must have 6 characters with one uppercase word
+                      </p>
+                    )}
+                  </div>
                   <label className="label">
                     <p className="text-base">
                       Already Have An Account? Please{" "}
