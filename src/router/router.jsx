@@ -5,6 +5,7 @@ import Contactus from "../contactus/Contactus";
 import Shop from "../shop/Shop";
 import Login from "../authentication/Login";
 import Signup from "../authentication/Signup";
+import Privateroute from "./Privateroute";
 
 
 const router = createBrowserRouter([
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
         },
         {
             path: '/shop',
-            element: <Shop></Shop>
+            element: <Privateroute><Shop></Shop></Privateroute>
         },
         {
           path: '/login',

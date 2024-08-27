@@ -1,8 +1,28 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { GiForkKnifeSpoon } from "react-icons/gi";
 import { Link, NavLink } from "react-router-dom";
+import { Authcontext } from "../providers/Authprovider";
+import { toast, ToastContainer } from "react-toastify";
+import { FaCartPlus } from "react-icons/fa6";
 
 const Navbar = () => {
+  const { user, logout } = useContext(Authcontext);
+
+  const handlelogout = () => {
+    logout()
+      .then(() => {
+        toast.success("Log Out successful!", {
+          theme: "dark",
+        });
+      })
+      .catch((error) => {
+        toast.error("Log Out failed, Please try again", {
+          theme: "dark",
+        });
+        console.error("Error during Logout:", error);
+      });
+  };
+
   const [showNotificationDropdown, setShowNotificationDropdown] =
     useState(false);
   const [showProfileDropdown, setShowProfileDropdown] = useState(false);
@@ -33,7 +53,8 @@ const Navbar = () => {
                   : isActive
                   ? "text-amber-600 font-bold "
                   : ""
-              }>
+              }
+            >
               HOME
             </NavLink>
           </li>
@@ -46,7 +67,8 @@ const Navbar = () => {
                   : isActive
                   ? "text-amber-600 font-bold "
                   : ""
-              }>
+              }
+            >
               SHOP
             </NavLink>
           </li>
@@ -59,7 +81,8 @@ const Navbar = () => {
                   : isActive
                   ? "text-amber-600 font-bold "
                   : ""
-              }>
+              }
+            >
               DASHBOARD
             </NavLink>
           </li>
@@ -72,7 +95,8 @@ const Navbar = () => {
                   : isActive
                   ? "text-amber-600 font-bold "
                   : ""
-              }>
+              }
+            >
               CONTACT US
             </NavLink>
           </li>
@@ -101,54 +125,32 @@ const Navbar = () => {
           <div className="flex-1 flex justify-center">{links}</div>
           <div className="flex items-center">
             {/* Notification dropdown */}
-            <div className="dropdown dropdown-end relative mr-3">
-              <button
-                tabIndex={0}
-                role="button"
-                className="btn btn-ghost btn-circle relative"
-                onClick={toggleNotificationDropdown}>
-                <div className="indicator">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                    />
-                  </svg>
-                  <span className="badge badge-sm indicator-item">
-                    {cartItemCount}
-                  </span>
-                </div>
-              </button>
-              {/* Notification dropdown content */}
-              {showNotificationDropdown && (
-                <div className="dropdown-content mt-2 z-10 absolute right-0 w-52 bg-white shadow-xl rounded-lg p-4">
-                  <div className="p-2">
-                    <span className="font-bold text-lg">8 Items</span>
-                    <span className="text-info block">Subtotal: $999</span>
-                    <button className="btn bg-pink-600 w-full text-white text-lg mt-2">
-                      View cart
-                    </button>
-                  </div>
-                </div>
-              )}
-            </div>
-            <Link to='/login'>
-              <button className="text-black ml-3">Login</button>
-            </Link>
+            <button className="btn btn-ghost">
+              <span className="text-lg">Carts</span><FaCartPlus />
+              <div className="badge badge-secondary">+0</div>
+            </button>
+            {/* fgagfg */}
+            {user ? (
+              <Link onClick={handlelogout}>
+                <button className="text-pink-600 text-lg font-semibold cursor-pointer:underline ml-3">
+                  Log Out
+                </button>
+              </Link>
+            ) : (
+              <Link to="/login">
+                <button className="text-pink-600 text-lg font-semibold hover:underline ml-3">
+                  Login
+                </button>
+              </Link>
+            )}
             {/* User profile dropdown */}
             <div className="dropdown dropdown-end ml-2 relative">
               <button
                 tabIndex={0}
                 role="button"
                 className="btn btn-ghost btn-circle relative"
-                onClick={toggleProfileDropdown}>
+                onClick={toggleProfileDropdown}
+              >
                 <div className="w-10 h-10 rounded-full overflow-hidden">
                   <img
                     alt="Profile"
@@ -161,7 +163,8 @@ const Navbar = () => {
                     showProfileDropdown ? "rotate-180" : ""
                   }`}
                   viewBox="0 0 20 20"
-                  fill="currentColor">
+                  fill="currentColor"
+                >
                   <path
                     fillRule="evenodd"
                     d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -175,7 +178,9 @@ const Navbar = () => {
                   <li className="p-2 hover:scale-110 duration-300 ease-in-out transition-all">
                     <a className="flex items-center justify-between text-lg">
                       <span>Profile</span>
-                      <span className="badge bg-pink-600 text-white">Login</span>
+                      <span className="badge bg-pink-600 text-white">
+                        Login
+                      </span>
                     </a>
                   </li>
                   <hr />
@@ -192,6 +197,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };
