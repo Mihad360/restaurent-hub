@@ -2,6 +2,7 @@ import Swal from "sweetalert2";
 import useAuth from "../hooks/useAuth";
 import { useLocation, useNavigate } from "react-router-dom";
 import useAxiossecure from "../hooks/useAxiossecure";
+import useCart from "../hooks/useCart";
 
 
 export default function Dishcard({item}) {
@@ -11,6 +12,7 @@ export default function Dishcard({item}) {
   const axiosSecure = useAxiossecure()
   const navigate = useNavigate()
   const location = useLocation()
+  const [, refetch] = useCart()
   
   const addtocart = food => {
     if(user && user.email){
@@ -30,6 +32,7 @@ export default function Dishcard({item}) {
             showConfirmButton: false,
             timer: 1500
           });
+          refetch();
         }
       })
     }else{
@@ -63,7 +66,7 @@ export default function Dishcard({item}) {
           <p className="text-black text-left pb-3">{recipe}</p>
           <div className="card-actions justify-between flex items-center">
             <h1 className="text-lg text-amber-600 font-semibold">${price}</h1>
-            <button onClick={()=>addtocart(item)} className="btn bg-amber-600 hover:bg-amber-400 w-40 mx-auto text-white text-base mr-3">Add to cart</button>
+            <button onClick={addtocart} className="btn bg-amber-600 hover:bg-amber-400 w-40 mx-auto text-white text-base mr-3">Add to cart</button>
           </div>
         </div>
       </div>

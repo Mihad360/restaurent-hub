@@ -78,7 +78,7 @@ const Navbar = () => {
           </li>
           <li className="hover:text-amber-600 hover:ease-in-out hover:transition-all hover:scale-110 duration-150 hover:font-bold">
             <NavLink
-              to="/about"
+              to="dashboard"
               className={({ isActive, isPending }) =>
                 isPending
                   ? "pending"
@@ -129,11 +129,12 @@ const Navbar = () => {
           <div className="flex-1 flex justify-center">{links}</div>
           <div className="flex items-center">
             {/* Notification dropdown */}
-            <button className="btn btn-ghost">
+            <Link to="dashboard/carts">
+            <button className="btn btn-ghost bg-gray-400">
               <span className="text-lg">Carts</span>
               <FaCartPlus />
-              <div className="badge badge-secondary">+{cart.length}</div>
-            </button>
+              <div className="badge badge-secondary  text-lg">+{cart.length}</div>
+            </button></Link>
             {/* fgagfg */}
             {user ? "" : (
               <Link to="/login">
