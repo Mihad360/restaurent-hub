@@ -1,12 +1,15 @@
 import { useContext, useState } from "react";
-import { GiForkKnifeSpoon } from "react-icons/gi";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { Authcontext } from "../providers/Authprovider";
 import { toast, ToastContainer } from "react-toastify";
 import { FaCartPlus } from "react-icons/fa6";
+import 'react-toastify/dist/ReactToastify.css';
+import useCart from "../hooks/useCart";
 
 const Navbar = () => {
   const { user, logout } = useContext(Authcontext);
+  const navigate = useNavigate()
+  const [cart] = useCart()
 
   const handlelogout = () => {
     logout()
@@ -14,6 +17,7 @@ const Navbar = () => {
         toast.success("Log Out successful!", {
           theme: "dark",
         });
+        navigate('/')
       })
       .catch((error) => {
         toast.error("Log Out failed, Please try again", {
@@ -23,22 +27,22 @@ const Navbar = () => {
       });
   };
 
-  const [showNotificationDropdown, setShowNotificationDropdown] =
-    useState(false);
+  // const [showNotificationDropdown, setShowNotificationDropdown] =
+    // useState(false);
   const [showProfileDropdown, setShowProfileDropdown] = useState(false);
-  const [cartItemCount, setCartItemCount] = useState(0); // Initial cart item count
+  // const [cartItemCount, setCartItemCount] = useState(0); // Initial cart item count
 
-  const toggleNotificationDropdown = () => {
-    setShowNotificationDropdown(!showNotificationDropdown);
-  };
+  // const toggleNotificationDropdown = () => {
+  //   setShowNotificationDropdown(!showNotificationDropdown);
+  // };
 
   const toggleProfileDropdown = () => {
     setShowProfileDropdown(!showProfileDropdown);
   };
 
-  const addToCart = () => {
-    setCartItemCount(cartItemCount + 1); // Increment cart item count
-  };
+  // const addToCart = () => {
+  //   setCartItemCount(cartItemCount + 1); // Increment cart item count
+  // };
 
   const links = (
     <>
@@ -126,17 +130,12 @@ const Navbar = () => {
           <div className="flex items-center">
             {/* Notification dropdown */}
             <button className="btn btn-ghost">
-              <span className="text-lg">Carts</span><FaCartPlus />
-              <div className="badge badge-secondary">+0</div>
+              <span className="text-lg">Carts</span>
+              <FaCartPlus />
+              <div className="badge badge-secondary">+{cart.length}</div>
             </button>
             {/* fgagfg */}
-            {user ? (
-              <Link onClick={handlelogout}>
-                <button className="text-pink-600 text-lg font-semibold cursor-pointer:underline ml-3">
-                  Log Out
-                </button>
-              </Link>
-            ) : (
+            {user ? "" : (
               <Link to="/login">
                 <button className="text-pink-600 text-lg font-semibold hover:underline ml-3">
                   Login
@@ -189,7 +188,19 @@ const Navbar = () => {
                   </li>
                   <hr />
                   <li className="p-2 hover:scale-110 duration-300 ease-in-out transition-all">
-                    <a className="block text-lg">Login</a>
+                    {user ? (
+                      <Link onClick={handlelogout}>
+                        <button className="block text-lg">
+                          Log Out
+                        </button>
+                      </Link>
+                    ) : (
+                      <Link to="/login">
+                        <button className="text-lg">
+                          Login
+                        </button>
+                      </Link>
+                    ) }
                   </li>
                 </ul>
               )}

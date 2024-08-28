@@ -1,11 +1,52 @@
+import Swal from "sweetalert2";
+import useAuth from "../hooks/useAuth";
+import { useLocation, useNavigate } from "react-router-dom";
+import useAxiossecure from "../hooks/useAxiossecure";
 
 
 export default function Dishcard({item}) {
 
-  const {name,id,image,recipe,price} = item
+  const {name,_id,image,recipe,price} = item
+  const {user} = useAuth()
+  const axiosSecure = useAxiossecure()
+  const navigate = useNavigate()
+  const location = useLocation()
   
   const addtocart = food => {
-    console.log(food)
+    if(user && user.email){
+      const cartItem = {
+        cartId: _id,
+        email: user.email,
+        name,image,price,recipe
+      }
+      axiosSecure.post("/carts", cartItem)
+      .then(res => {
+        console.log(res.data)
+        if(res.data.insertedId){
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: `${name} added to the cart`,
+            showConfirmButton: false,
+            timer: 1500
+          });
+        }
+      })
+    }else{
+      Swal.fire({
+        title: "You are not logged in!!",
+        text: "Please login to add to the cart",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, Login"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          navigate('/login', {from: location})
+        }
+      });
+    }
   }
 
   return (
