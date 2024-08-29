@@ -6,8 +6,9 @@ import { NavLink, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
   return (
-    <div className="flex">
-      <div className="w-64 min-h-screen bg-amber-300">
+    <div className="">
+      <div className="max-w-7xl mx-auto flex">
+      <div className="w-64 min-h-screen">
         <ul className="list-none p-7 text-lg text-black space-y-2 font-semibold">
           <li className="hover:underline hover:text-pink-600">
             <NavLink
@@ -26,7 +27,7 @@ const Dashboard = () => {
               </span>
             </NavLink>
           </li>
-          <li className="hover:underline hover:text-pink-600 ">
+          <li className="hover:underline hover:text-pink-600">
             <NavLink
               to="/dashboard/carts"
               className={({ isActive, isPending }) =>
@@ -77,9 +78,9 @@ const Dashboard = () => {
               </span>
             </NavLink>
           </li>
-          {/* dividerrrr */}
-          <div className="flex w-full flex-col">
-            <div className="divider divider-neutral"></div>
+          {/* Horizontal Divider */}
+          <div className="w-full">
+            <div className="border-t border-neutral-500 my-4"></div>
           </div>
           {/* ---------- */}
           <li className="hover:underline hover:text-pink-600">
@@ -135,9 +136,15 @@ const Dashboard = () => {
           </li>
         </ul>
       </div>
-      <div className="flex-1">
-        <Outlet></Outlet>
+      {/* Vertical Divider */}
+      <div className="relative flex ">
+        <div className="absolute left-0 top-0 h-full w-px bg-neutral-500"></div>
       </div>
+      {/* ---------- */}
+      <div className="flex-1 ml-7">
+        <Outlet />
+      </div>
+    </div>
     </div>
   );
 };
