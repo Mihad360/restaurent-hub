@@ -22,9 +22,9 @@ const useFood = () => {
     isPending: loading,
     refetch,
   } = useQuery({
-    queryKey: ["menu"],
+    queryKey: ["menus"],
     queryFn: async () => {
-      const res = await axiosPublic.get("/menu");
+      const res = await axiosPublic.get("/menus");
       return res.data;
     },
   });

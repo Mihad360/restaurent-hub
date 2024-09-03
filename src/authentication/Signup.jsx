@@ -3,12 +3,14 @@ import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Authcontext } from "../providers/Authprovider";
 import Swal from "sweetalert2";
+import useaxiospublic from "../hooks/useaxiospublic";
 
 const Signup = () => {
 
   const { createuser,updateprofile } = useContext(Authcontext);
   const navigate = useNavigate()
   const location = useLocation()
+  const axiosPublic = useaxiospublic()
 
   const {
     register,
@@ -27,14 +29,25 @@ const Signup = () => {
         updateprofile(data.name, data.photoURL)
         .then(()=>{
           console.log("User profile updated successfully")
-          Swal.fire({
-            position: "top-end",
-            icon: "success",
-            title: "SignUp successfully",
-            showConfirmButton: false,
-            timer: 1500
-          });
-          navigate('/')
+          const userInfo = {
+            name: data.name,
+            email: data.email,
+          }
+          axiosPublic.post('/users', userInfo)
+          .then(res => {
+            if(res.data.insertedId){
+              console.log('user added to the database')
+              reset()
+              Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "SignUp successfully",
+                showConfirmButton: false,
+                timer: 1500
+              });
+              navigate('/')
+            }
+          })
         })
         .catch(error => {
           console.log(error)

@@ -8,7 +8,7 @@ const Privateroute = ({children}) => {
     const location = useLocation()
 
     if(loading) {
-        return <div className="py-20 min-h-screen mx-auto">
+        return <div className=" h-screen flex items-center mx-auto w-16">
         <span className="loading loading-dots loading-lg"></span>
     </div>
     }
