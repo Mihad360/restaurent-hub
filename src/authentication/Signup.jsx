@@ -4,13 +4,35 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Authcontext } from "../providers/Authprovider";
 import Swal from "sweetalert2";
 import useaxiospublic from "../hooks/useaxiospublic";
+import { FcGoogle } from "react-icons/fc";
 
 const Signup = () => {
 
-  const { createuser,updateprofile } = useContext(Authcontext);
+  const { createuser,updateprofile,googlelogin } = useContext(Authcontext);
   const navigate = useNavigate()
   const location = useLocation()
   const axiosPublic = useaxiospublic()
+  const from = location.state?.from?.pathname || '/'
+
+  const handlegoogle = () => {
+    googlelogin()
+    .then((result)=>{
+      const userInfo = {
+        email: result.user?.email,
+        name: result.user?.displayName,
+      }
+      axiosPublic.post('/users', userInfo)
+      .then(res => {
+        console.log(res.data)
+      })
+      console.log("google login success")
+      
+      // navigate(from, {replace: true})
+    })
+    .catch(error => {
+      console.log(error)
+    })
+  }
 
   const {
     register,
@@ -153,6 +175,12 @@ const Signup = () => {
                   </button>
                 </div>
               </form>
+              <div className="mx-auto pb-7">
+              <button onClick={handlegoogle} className="text-3xl btn bg-gray-300 hover:bg-gray-100 mx-auto text-white flex items-center">
+                <FcGoogle />{" "}
+                <p className="text-lg text-black">SignUp with Google</p>
+              </button>
+            </div>
             </div>
           </div>
         </div>

@@ -1,29 +1,32 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
 import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Authcontext } from "../providers/Authprovider";
 import Swal from "sweetalert2";
+import useaxiospublic from "../hooks/useaxiospublic";
 
 const Login = () => {
   const { signin, googlelogin } = useContext(Authcontext);
   const navigate = useNavigate()
   const location = useLocation()
+  const axiosPublic = useaxiospublic()
 
   const from = location.state?.from?.pathname || '/'
 
   const handlegoogle = () => {
     googlelogin()
-    .then(()=>{
-      console.log("google login success")
-      Swal.fire({
-        position: "top-end",
-        icon: "success",
-        title: "Login by google successfully",
-        showConfirmButton: false,
-        timer: 1500
-      });
-      navigate(from, {replace: true})
+    .then((result)=>{
+        const userInfo = {
+          email: result.user?.email,
+          name: result.user?.displayName,
+        }
+        axiosPublic.post('/users', userInfo)
+        .then(res => {
+          console.log(res.data)
+        })
+        console.log("google login success")
     })
     .catch(error => {
       console.log(error)

@@ -16,7 +16,7 @@ export default function Dishes() {
     const delay = setTimeout(() => {
       setLoading(true); // Show skeleton loading state after delay
 
-      axiosPublic.get('/menu')
+      axiosPublic.get('/menus')
         .then((response) => {
           setFood(response.data);
           setLoading(false); // Hide skeleton loading state once data is fetched
