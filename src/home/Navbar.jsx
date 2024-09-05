@@ -22,7 +22,7 @@ const Navbar = () => {
       .catch((error) => {
         toast.error("Log Out failed, Please try again", {
           theme: "dark",
-          position: "top-left"
+          position: "top-center"
         });
         console.error("Error during Logout:", error);
       });

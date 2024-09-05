@@ -8,7 +8,7 @@ const Allusers = () => {
     const {user} = useAuth()
   const [users,refetch] = useUsers();
   const axiosSecure = useAxiossecure()
-
+  
   const makeAdmin = (id) => {
     axiosSecure.patch(`/users/admin/${id}`)
     .then(res => {

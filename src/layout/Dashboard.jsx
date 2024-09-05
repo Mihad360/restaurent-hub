@@ -5,9 +5,10 @@ import { RiAdminFill, RiContactsBook3Fill } from "react-icons/ri";
 import { TbBrandBooking } from "react-icons/tb";
 import { VscPreview } from "react-icons/vsc";
 import { NavLink, Outlet } from "react-router-dom";
+import useAdmin from "../hooks/useAdmin";
 
 const Dashboard = () => {
-  const isAdmin = true;
+  const [isAdmin] = useAdmin();
 
   return (
     <div className="">
