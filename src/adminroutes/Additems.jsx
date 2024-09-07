@@ -1,10 +1,48 @@
 import { useForm } from "react-hook-form";
 import { GiHotMeal } from "react-icons/gi";
+import useaxiospublic from "../hooks/useaxiospublic";
+import useAxiossecure from "../hooks/useAxiossecure";
+import Swal from "sweetalert2";
+
+const image_hosting_key = import.meta.env.VITE_IMAGE_UPLOAD_KEY;
+const image_hosting_url = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
 
 const Additems = () => {
-  const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => {
+
+  const axiosPublic = useaxiospublic()
+  const axiosSecure = useAxiossecure()
+
+  const { register, handleSubmit, reset } = useForm();
+  const onSubmit = async (data) => {
     console.log(data);
+    const imagefile = {image: data.image[0]}
+    const res = await axiosPublic.post(image_hosting_url, imagefile, {
+      headers: {
+        "content-type": 'multipart/form-data'
+      }
+    })
+    if(res.data.success){
+      const menuItem = {
+        name: data.name,
+        category: data.category,
+        price: parseFloat(data.price),
+        recipe: data.recipe,
+        image: res.data.data.display_url
+      }
+      const menudata = await axiosSecure.post('/menus', menuItem)
+      console.log(menudata.data)
+      if(menudata.data.insertedId){
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "New Recipe added successfully",
+          showConfirmButton: false,
+          timer: 1500
+        });
+        reset()
+      }
+    }
+    console.log(res.data)
   };
 
   return (
@@ -29,11 +67,11 @@ const Additems = () => {
                 <div>
                   <label className="text-lg font-medium text-black">Category</label>
                 </div>
-                <select
+                <select defaultValue="default"
                   className="outline-none px-3 py-2 rounded-lg border border-amber-600 w-[400px] mt-2"
                   {...register("category", {required: true})}
                 >
-                  <option disabled selected>Select a category </option>
+                  <option disabled value="default">Select a category </option>
                   <option value="Dessert">Dessert</option>
                   <option value="Soups">Soups</option>
                   <option value="Pizza">Pizza</option>

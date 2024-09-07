@@ -12,7 +12,6 @@ import Allusers from "../adminroutes/Allusers";
 import Additems from "../adminroutes/Additems";
 import Adminroute from "./Adminroute";
 
-
 const router = createBrowserRouter([
   {
     path: "/",

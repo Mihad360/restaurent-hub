@@ -5,6 +5,7 @@ import { toast, ToastContainer } from "react-toastify";
 import { FaCartPlus } from "react-icons/fa6";
 import 'react-toastify/dist/ReactToastify.css';
 import useCart from "../hooks/useCart";
+import useUsers from "../hooks/useUsers";
 
 const Navbar = () => {
   const { user, logout } = useContext(Authcontext);
@@ -152,11 +153,17 @@ const Navbar = () => {
                 className="btn btn-ghost btn-circle relative"
                 onClick={toggleProfileDropdown}
               >
-                <div className="w-10 h-10 rounded-full overflow-hidden">
-                  <img
+                <div className="overflow-hidden">
+                  {
+                    user ? <img className="object-cover w-10 h-10 rounded-full"
                     alt="Profile"
-                    src="https://i.ibb.co/4Rdgv5m/0684456b-aa2b-4631-86f7-93ceaf33303c.png"
-                  />
+                    src={user?.photoURL}
+                  /> : <img className="object-cover w-10 h-10 rounded-full"
+                  alt="Profile"
+                  src="https://i.ibb.co/4Rdgv5m/0684456b-aa2b-4631-86f7-93ceaf33303c.png"
+                />
+                  }
+                  
                 </div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -164,7 +171,7 @@ const Navbar = () => {
                     showProfileDropdown ? "rotate-180" : ""
                   }`}
                   viewBox="0 0 20 20"
-                  fill="currentColor"
+                  fill="white"
                 >
                   <path
                     fillRule="evenodd"
