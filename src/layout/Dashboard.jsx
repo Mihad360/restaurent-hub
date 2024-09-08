@@ -145,6 +145,23 @@ const Dashboard = () => {
                 </li>
                 <li className="hover:underline hover:text-pink-600">
                   <NavLink
+                    to="/dashboard/payment"
+                    className={({ isActive, isPending }) =>
+                      isPending
+                        ? "pending"
+                        : isActive
+                        ? "text-pink-600 font-bold"
+                        : ""
+                    }
+                  >
+                    <span className="flex items-center gap-3">
+                      <FaBook />
+                      Payment
+                    </span>
+                  </NavLink>
+                </li>
+                <li className="hover:underline hover:text-pink-600">
+                  <NavLink
                     to="/dashboard/ddd"
                     className={({ isActive, isPending }) =>
                       isPending

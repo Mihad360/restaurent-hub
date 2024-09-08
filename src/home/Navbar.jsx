@@ -171,7 +171,7 @@ const Navbar = () => {
                     showProfileDropdown ? "rotate-180" : ""
                   }`}
                   viewBox="0 0 20 20"
-                  fill="white"
+                  fill={user ? "white" : "black"}
                 >
                   <path
                     fillRule="evenodd"

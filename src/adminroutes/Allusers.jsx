@@ -39,7 +39,7 @@ const Allusers = () => {
       if (result.isConfirmed) {
         axiosSecure.delete(`/users/${id}`)
         .then((res) => {
-          if (res.data.deletedCount) {
+          if (res.data.deletedCount > 0) {
             Swal.fire({
               title: "Deleted!",
               text: "This User has been removed.",
@@ -98,7 +98,7 @@ const Allusers = () => {
                       <th>
                         <button
                           onClick={() => handledelete(item._id)}
-                          className="btn bg-amber-600 hover:bg-amber-400 btn-sm mx-auto text-white text-base mr-3"
+                          className="btn bg-red-600 hover:bg-amber-400 btn-sm mx-auto text-white text-base mr-3"
                         >
                           delete
                         </button>

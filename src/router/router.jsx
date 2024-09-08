@@ -7,15 +7,20 @@ import Login from "../authentication/Login";
 import Signup from "../authentication/Signup";
 import Privateroute from "./Privateroute";
 import Dashboard from "../layout/Dashboard";
-import Carts from "../dashboard/Carts";
+import Carts from "../userroutes/Carts";
 import Allusers from "../adminroutes/Allusers";
 import Additems from "../adminroutes/Additems";
 import Adminroute from "./Adminroute";
+import Manageitems from "../adminroutes/Manageitems";
+import Updateitem from "../adminroutes/Updateitem";
+import Error from "../error/Error";
+import Payment from "../userroutes/Payment";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout></Layout>,
+    errorElement: <Error></Error>,
     children: [
         {
             path: '/',
@@ -42,10 +47,15 @@ const router = createBrowserRouter([
   {
     path: 'dashboard',
     element: <Privateroute><Dashboard></Dashboard></Privateroute>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: 'carts',
         element: <Carts></Carts>
+      },
+      {
+        path: 'payment',
+        element: <Payment></Payment>
       },
       {
         path: 'allusers',
@@ -54,6 +64,15 @@ const router = createBrowserRouter([
       {
         path: 'additems',
         element: <Adminroute><Additems></Additems></Adminroute>
+      },
+      {
+        path: 'manageitems',
+        element: <Adminroute><Manageitems></Manageitems></Adminroute>
+      },
+      {
+        path: 'manageitems/updateitem/:id',
+        element: <Updateitem></Updateitem>,
+        loader: ({params}) => fetch(`http://localhost:5000/menus/${params.id}`)
       }
     ]
   }

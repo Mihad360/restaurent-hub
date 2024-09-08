@@ -10,7 +10,7 @@ const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <div className="bg-gray-100">
+    <div className="bg-gray-100 min-h-screen">
       <div>
         <QueryClientProvider client={queryClient}>
           <Authprovider>

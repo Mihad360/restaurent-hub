@@ -1,6 +1,7 @@
 import Swal from "sweetalert2";
 import useCart from "../hooks/useCart";
 import useAxiossecure from "../hooks/useAxiossecure";
+import { Link } from "react-router-dom";
 
 const Carts = () => {
   const axiosSecure = useAxiossecure();
@@ -50,9 +51,16 @@ const Carts = () => {
               Total Price: <span className="text-amber-600">${totalPrice}</span>
             </p>
             <div>
-              <button className="btn bg-amber-600 hover:bg-amber-400 w-32 mx-auto text-white text-base mr-3">
+              {
+                cart.length ? <Link to="/dashboard/payment"><button className="btn bg-amber-600 hover:bg-amber-400 w-32 mx-auto text-white text-base mr-3">
+                Pay
+              </button></Link> : <button disabled className="btn bg-amber-600 hover:bg-amber-400 w-32 mx-auto text-white text-base mr-3">
                 Pay
               </button>
+              }
+              {/* <Link to="/dashboard/payment"><button className="btn bg-amber-600 hover:bg-amber-400 w-32 mx-auto text-white text-base mr-3">
+                Pay
+              </button></Link> */}
             </div>
           </div>
           <div>
@@ -88,12 +96,12 @@ const Carts = () => {
                       </td>
                       <td className="text-lg font-bold">{item.name}</td>
                       <td className="text-base font-bold text-amber-600">
-                        ${item.price}
+                        BDT {item.price}
                       </td>
                       <th>
                         <button
                           onClick={() => handledelete(item._id)}
-                          className="btn bg-amber-600 hover:bg-amber-400 btn-sm mx-auto text-white text-base mr-3"
+                          className="btn bg-red-600 hover:bg-amber-400 btn-sm mx-auto text-white text-base mr-3"
                         >
                           delete
                         </button>

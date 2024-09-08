@@ -65,7 +65,7 @@ export default function Dishcard({item}) {
           <h2 className="card-title text-2xl text-amber-600 font-bold">{name}</h2>
           <p className="text-black text-left pb-3">{recipe}</p>
           <div className="card-actions justify-between flex items-center">
-            <h1 className="text-lg text-amber-600 font-semibold">${price}</h1>
+            <h1 className="text-lg text-amber-600 font-semibold">BDT {price}</h1>
             <button onClick={addtocart} className="btn bg-amber-600 hover:bg-amber-400 w-40 mx-auto text-white text-base mr-3">Add to cart</button>
           </div>
         </div>
