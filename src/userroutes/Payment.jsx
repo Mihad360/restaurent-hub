@@ -1,7 +1,8 @@
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
+import Paymentform from "./Paymentform";
 
-const stripePromise = loadStripe('')
+const stripePromise = loadStripe(import.meta.env.VITE_PAYMENT_KEY)
 
 const Payment = () => {
   return (
@@ -12,7 +13,7 @@ const Payment = () => {
         </h1>
         <div className="bg-gray-200 rounded-lg p-5 mt-6">
           <Elements stripe={stripePromise}>
-
+            <Paymentform></Paymentform>
           </Elements>
         </div>
       </div>
