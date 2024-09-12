@@ -17,7 +17,7 @@ export default function Dishcard({item}) {
   const addtocart = food => {
     if(user && user.email){
       const cartItem = {
-        cartId: _id,
+        menuId: _id,
         email: user.email,
         name,image,price,recipe
       }

@@ -6,9 +6,11 @@ import { TbBrandBooking } from "react-icons/tb";
 import { VscPreview } from "react-icons/vsc";
 import { NavLink, Outlet } from "react-router-dom";
 import useAdmin from "../hooks/useAdmin";
+import useCart from "../hooks/useCart";
 
 const Dashboard = () => {
   const [isAdmin] = useAdmin();
+  const [cart] = useCart()
 
   return (
     <div className="">
@@ -111,7 +113,7 @@ const Dashboard = () => {
               <>
                 <li className="hover:underline hover:text-pink-600">
                   <NavLink
-                    to="/dashboard/home"
+                    to="/dashboard/userhome"
                     className={({ isActive, isPending }) =>
                       isPending
                         ? "pending"
@@ -139,7 +141,7 @@ const Dashboard = () => {
                   >
                     <span className="flex items-center gap-3">
                       <FaCartPlus />
-                      Carts
+                      Carts<p className="text-pink-600 font-semibold">({cart.length})</p>
                     </span>
                   </NavLink>
                 </li>
@@ -157,6 +159,23 @@ const Dashboard = () => {
                     <span className="flex items-center gap-3">
                       <FaBook />
                       Payment
+                    </span>
+                  </NavLink>
+                </li>
+                <li className="hover:underline hover:text-pink-600">
+                  <NavLink
+                    to="/dashboard/paymenthistory"
+                    className={({ isActive, isPending }) =>
+                      isPending
+                        ? "pending"
+                        : isActive
+                        ? "text-pink-600 font-bold"
+                        : ""
+                    }
+                  >
+                    <span className="flex items-center gap-3">
+                      <FaBook />
+                      Payment History
                     </span>
                   </NavLink>
                 </li>

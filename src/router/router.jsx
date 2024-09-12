@@ -15,6 +15,9 @@ import Manageitems from "../adminroutes/Manageitems";
 import Updateitem from "../adminroutes/Updateitem";
 import Error from "../error/Error";
 import Payment from "../userroutes/Payment";
+import Paymenthistory from "../userroutes/Paymenthistory";
+import Adminhome from "../adminroutes/Adminhome";
+import Userhome from "../userroutes/Userhome";
 
 const router = createBrowserRouter([
   {
@@ -56,6 +59,18 @@ const router = createBrowserRouter([
       {
         path: 'payment',
         element: <Payment></Payment>
+      },
+      {
+        path: 'paymenthistory',
+        element: <Paymenthistory></Paymenthistory>
+      },
+      {
+        path: 'userhome',
+        element: <Userhome></Userhome>
+      },
+      {
+        path: 'adminhome',
+        element: <Adminhome></Adminhome>
       },
       {
         path: 'allusers',

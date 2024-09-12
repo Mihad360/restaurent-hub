@@ -64,7 +64,8 @@ const Carts = () => {
             </div>
           </div>
           <div>
-            <div className="overflow-x-auto">
+            {
+              cart.length === 0 ? <p className="text-black text-2xl font-semibold text-center py-6">No carts added</p> : <div className="overflow-x-auto">
               <table className="table">
                 {/* head */}
                 <thead>
@@ -111,6 +112,7 @@ const Carts = () => {
                 </tbody>
               </table>
             </div>
+            }
           </div>
         </div>
       </div>

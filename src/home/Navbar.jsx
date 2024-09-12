@@ -1,16 +1,17 @@
-import { useContext, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { Authcontext } from "../providers/Authprovider";
 import { toast, ToastContainer } from "react-toastify";
 import { FaCartPlus } from "react-icons/fa6";
 import 'react-toastify/dist/ReactToastify.css';
 import useCart from "../hooks/useCart";
-import useUsers from "../hooks/useUsers";
+import useAuth from "../hooks/useAuth";
+import useAdmin from "../hooks/useAdmin";
+import { useState } from "react";
 
 const Navbar = () => {
-  const { user, logout } = useContext(Authcontext);
+  const { user, logout } = useAuth();
   const navigate = useNavigate()
   const [cart] = useCart()
+  const [isAdmin] = useAdmin()
 
   const handlelogout = () => {
     logout()
@@ -78,7 +79,39 @@ const Navbar = () => {
               SHOP
             </NavLink>
           </li>
-          <li className="hover:text-amber-600 hover:ease-in-out hover:transition-all hover:scale-110 duration-150 hover:font-bold">
+              {
+                user && isAdmin && <li className="hover:text-amber-600 hover:ease-in-out hover:transition-all hover:scale-110 duration-150 hover:font-bold">
+                <NavLink
+                  to="/dashboard/adminhome"
+                  className={({ isActive, isPending }) =>
+                    isPending
+                      ? "pending"
+                      : isActive
+                      ? "text-amber-600 font-bold "
+                      : ""
+                  }
+                >
+                  DASHBOARD
+                </NavLink>
+              </li> 
+              }
+              {
+                user && !isAdmin && <li className="hover:text-amber-600 hover:ease-in-out hover:transition-all hover:scale-110 duration-150 hover:font-bold">
+                <NavLink
+                  to="/dashboard/userhome"
+                  className={({ isActive, isPending }) =>
+                    isPending
+                      ? "pending"
+                      : isActive
+                      ? "text-amber-600 font-bold "
+                      : ""
+                  }
+                >
+                  DASHBOARD
+                </NavLink>
+              </li> 
+              }
+          {/* <li className="hover:text-amber-600 hover:ease-in-out hover:transition-all hover:scale-110 duration-150 hover:font-bold">
             <NavLink
               to="dashboard"
               className={({ isActive, isPending }) =>
@@ -91,7 +124,7 @@ const Navbar = () => {
             >
               DASHBOARD
             </NavLink>
-          </li>
+          </li> */}
           <li className="hover:text-amber-600 hover:ease-in-out hover:transition-all hover:scale-110 duration-150 hover:font-bold">
             <NavLink
               to="/contactus"
