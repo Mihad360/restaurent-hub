@@ -66,7 +66,7 @@ const Updateitem = () => {
                 type="text"
                 placeholder="item name"
                 className="outline-none px-3 py-2 rounded-lg border border-amber-600 w-full mt-2"
-                {...register("name", { required: true })}
+                {...register("name")}
               />
             </div>
             <div className="flex items-center gap-10 pt-3">
@@ -79,7 +79,7 @@ const Updateitem = () => {
                 <select
                   defaultValue={category}
                   className="outline-none px-3 py-2 rounded-lg border border-amber-600 w-[400px] mt-2"
-                  {...register("category", { required: true })}
+                  {...register("category")}
                 >
                   {/* <option disabled value="default">
                     Select a category{" "}
@@ -104,7 +104,7 @@ const Updateitem = () => {
                   type="number"
                   placeholder="item price"
                   className="outline-none px-3 py-2 rounded-lg border border-amber-600 w-[400px] mt-2"
-                  {...register("price", { required: true })}
+                  {...register("price")}
                 />
               </div>
             </div>
@@ -120,7 +120,7 @@ const Updateitem = () => {
                 placeholder="recipe details or description"
                 rows={4}
                 className="outline-none px-3 py-2 rounded-lg border border-amber-600 w-full mt-2"
-                {...register("recipe", { required: true })}
+                {...register("recipe")}
               />
             </div>
             <div className="pt-3">
@@ -132,7 +132,7 @@ const Updateitem = () => {
               <input
                 className="mt-2 file-input file-input-bordered w-full max-w-md"
                 type="file"
-                {...register("image", { required: true })}
+                {...register("image")}
               />
             </div>
             <div className="mt-7 text-center form-control">

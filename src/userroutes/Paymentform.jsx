@@ -78,11 +78,11 @@ const Paymentform = () => {
         transactionId: paymentIntent.id,
         date: moment().format('llll'),
         cartIds: cart.map((item) => item._id),
-        menuIds: cart.map((item) => item.menuId),
+        menuItemIds: cart.map((item) => item.menuId),
         status: "pending",
       };
 
-      const res = await axiosSecure.post("/payments", payment);
+      const res = await axiosSecure.post("/payments", payment)
       if(res.data.result.insertedId){
         Swal.fire({
           position: "top-end",

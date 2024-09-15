@@ -7,19 +7,19 @@ import useCart from "../hooks/useCart";
 
 export default function Dishcard({item}) {
 
-  const {name,_id,image,recipe,price} = item
+  const {name,_id,image,recipe,price,category} = item
   const {user} = useAuth()
   const axiosSecure = useAxiossecure()
   const navigate = useNavigate()
   const location = useLocation()
   const [, refetch] = useCart()
   
-  const addtocart = food => {
+  const addtocart = () => {
     if(user && user.email){
       const cartItem = {
         menuId: _id,
         email: user.email,
-        name,image,price,recipe
+        name,image,price,recipe,category
       }
       axiosSecure.post("/carts", cartItem)
       .then(res => {

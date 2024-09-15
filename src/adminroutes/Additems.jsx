@@ -12,6 +12,10 @@ const Additems = () => {
   const axiosPublic = useaxiospublic()
   const axiosSecure = useAxiossecure()
 
+  const generateUniqueId = () => {
+    return `menu-${Date.now()}`;  // Simple unique ID based on timestamp
+  }
+
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = async (data) => {
     console.log(data);
@@ -23,6 +27,7 @@ const Additems = () => {
     })
     if(res.data.success){
       const menuItem = {
+        _id: generateUniqueId(),
         name: data.name,
         category: data.category,
         price: parseFloat(data.price),
@@ -44,6 +49,7 @@ const Additems = () => {
     }
     console.log(res.data)
   };
+  
 
   return (
     <div>
