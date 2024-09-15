@@ -6,6 +6,7 @@ import useCart from "../hooks/useCart";
 import useAuth from "../hooks/useAuth";
 import useAdmin from "../hooks/useAdmin";
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 const Navbar = () => {
   const { user, logout } = useAuth();
@@ -16,8 +17,12 @@ const Navbar = () => {
   const handlelogout = () => {
     logout()
       .then(() => {
-        toast.success("Log Out successful!", {
-          theme: "dark",
+        Swal.fire({
+          position: "top-left",
+          icon: "success",
+          title: "Login successfully",
+          showConfirmButton: false,
+          timer: 1500
         });
         navigate('/')
       })
@@ -111,20 +116,6 @@ const Navbar = () => {
                 </NavLink>
               </li> 
               }
-          {/* <li className="hover:text-amber-600 hover:ease-in-out hover:transition-all hover:scale-110 duration-150 hover:font-bold">
-            <NavLink
-              to="dashboard"
-              className={({ isActive, isPending }) =>
-                isPending
-                  ? "pending"
-                  : isActive
-                  ? "text-amber-600 font-bold "
-                  : ""
-              }
-            >
-              DASHBOARD
-            </NavLink>
-          </li> */}
           <li className="hover:text-amber-600 hover:ease-in-out hover:transition-all hover:scale-110 duration-150 hover:font-bold">
             <NavLink
               to="/contactus"

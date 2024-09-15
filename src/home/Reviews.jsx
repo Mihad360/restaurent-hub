@@ -1,26 +1,39 @@
-
+import useAuth from "../hooks/useAuth";
+import useReview from "../hooks/useReview";
 
 export default function Reviews() {
+
+  const {user} = useAuth()
+  const [userReviews] = useReview()
+
   return (
     <div className="max-w-7xl mx-auto">
-      <div className="flex items-center justify-center gap-10 pt-10">
+      <div className="flex items-center justify-center gap-10 pt-10 px-5">
         <div>
           <img className=""
             src="https://i.ibb.co/vx4Gbtz/overhead-view-pizza-wooden-board-with-spatula-removebg-preview.png"
             alt=""
           />
         </div>
-        <div className="w-[700px]">
-            <h1 className="text-amber-600 font-semibold text-2xl pb-2">Customer Reviews</h1>
-            <p className="text-lg text-black pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non distinctio deleniti et. Molestiae, neque omnis. Laboriosam numquam incidunt blanditiis, perspiciatis maiores excepturi?</p>
+        {
+          userReviews.sort().slice(0,1).map(item => <div key={item._id} className="">
+            <div className="w-[600px]">
+            <h1 className="text-amber-600 font-semibold text-2xl pb-4">Customer Recent Review</h1>
+            <p className="text-lg text-black pb-3">{item.review}</p>
             <div className="flex items-center gap-6">
-                <img className="w-12 rounded-full" src="" alt="" />
+              {
+                user ? <img className="w-16 rounded-full" src={user?.photoURL} alt="" /> : <img className="w-16" src="https://i.ibb.co/4Rdgv5m/0684456b-aa2b-4631-86f7-93ceaf33303c.png" alt="" />
+              }
                 <div>
-                    <h1>hiiiiiiiii</h1>
-                    <p>rating</p>
+                {
+                user ? <h1>{user?.displayName}</h1> : <img src="" alt="" />
+              }
+                    <p className="text-amber-600 font-bold">{item.rating}</p>
                 </div>
             </div>
         </div>
+          </div>)
+        }
       </div>
     </div>
   );

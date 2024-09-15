@@ -51,7 +51,7 @@ const Updateitem = () => {
     <div>
       <div>
         <h1 className="text-center text-3xl font-bold text-amber-600 pt-5">
-          Add Items
+          Update a specefic Item
         </h1>
         <div className="bg-gray-200 rounded-lg p-10 mt-6">
           <form onSubmit={handleSubmit(onSubmit)}>

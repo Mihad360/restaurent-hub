@@ -72,7 +72,7 @@ const Dashboard = () => {
                 </span>
               </NavLink>
             </li>
-            <li className="hover:underline hover:text-pink-600">
+            {/* <li className="hover:underline hover:text-pink-600">
               <NavLink
                 to="/dashboard/managebookings"
                 className={({ isActive, isPending }) =>
@@ -89,7 +89,7 @@ const Dashboard = () => {
                   Manage Bookings
                 </span>
               </NavLink>
-            </li>
+            </li> */}
             <li className="hover:underline hover:text-pink-600">
               <NavLink
                 to="/dashboard/allusers"
@@ -179,7 +179,7 @@ const Dashboard = () => {
                     </span>
                   </NavLink>
                 </li>
-                <li className="hover:underline hover:text-pink-600">
+                {/* <li className="hover:underline hover:text-pink-600">
                   <NavLink
                     to="/dashboard/ddd"
                     className={({ isActive, isPending }) =>
@@ -195,7 +195,7 @@ const Dashboard = () => {
                       My Bookings
                     </span>
                   </NavLink>
-                </li>
+                </li> */}
                 <li className="hover:underline hover:text-pink-600">
                   <NavLink
                     to="/dashboard/fff"

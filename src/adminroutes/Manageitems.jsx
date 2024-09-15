@@ -37,7 +37,7 @@ const Manageitems = () => {
     <div>
       <div>
         <h1 className="text-center text-3xl font-bold text-amber-600 pt-5">
-          All Users
+          Manage Your Items
         </h1>
         <div className="bg-gray-200 rounded-lg p-5 mt-6 mb-10">
           <div className="flex items-center justify-between pb-5">

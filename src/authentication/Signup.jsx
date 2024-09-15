@@ -28,7 +28,7 @@ const Signup = () => {
         });
         console.log("google login success");
 
-        // navigate(from, {replace: true})
+        navigate(from, {replace: true})
       })
       .catch((error) => {
         console.log(error);

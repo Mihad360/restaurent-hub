@@ -26,6 +26,7 @@ const Login = () => {
         .then(res => {
           console.log(res.data)
         })
+        navigate(from, {replace: true})
         console.log("google login success")
     })
     .catch(error => {

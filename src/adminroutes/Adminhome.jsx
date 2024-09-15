@@ -58,6 +58,10 @@ const Adminhome = () => {
             </p>
           </div>
         </div>
+        <div className="p-5 w-80 text-center mt-5">
+            <img className="mx-auto w-60 rounded-full border-2 border-gray-300" src={user?.photoURL} alt="" />
+            <h1 className="pt-5 text-3xl font-bold text-pink-600">{user?.displayName}</h1>
+        </div>
       </div>
     </div>
   );

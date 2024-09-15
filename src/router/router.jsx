@@ -87,7 +87,7 @@ const router = createBrowserRouter([
       {
         path: 'manageitems/updateitem/:id',
         element: <Updateitem></Updateitem>,
-        loader: ({params}) => fetch(`https://restaurent-hub-server.vercel.app/menus/${params.id}`)
+        loader: ({params}) => fetch(`http://localhost:5000/menus/${params.id}`)
       }
     ]
   }
