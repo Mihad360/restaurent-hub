@@ -16,24 +16,30 @@ const Signup = () => {
   const axiosPublic = useaxiospublic();
   const from = location.state?.from?.pathname || "/";
 
-  const handlegoogle = () => {
-    googlelogin()
-      .then((result) => {
+  const handlegoogle = async () => {
+    try {
+        // Perform Google login
+        const result = await googlelogin();
+        
+        // Create user info object
         const userInfo = {
-          email: result.user?.email,
-          name: result.user?.displayName,
+            email: result.user?.email,
+            name: result.user?.displayName,
         };
-        axiosPublic.post("/users", userInfo).then((res) => {
-          console.log(res.data);
-        });
-        console.log("google login success");
 
-        navigate(from, {replace: true})
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
+        // Save user information to your backend
+        const res = await axiosPublic.post('/users', userInfo);
+        console.log(res.data);
+
+        // Navigate to the desired route only after user info is saved
+        navigate(from, { replace: true });
+        console.log("Google login success");
+        
+    } catch (error) {
+        console.log("Google login error:", error);
+    }
+};
+
 
   const {
     register,
@@ -43,50 +49,91 @@ const Signup = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
-    console.log(data);
-    const imagefile = { image: data.image[0] };
-    const resimage = await axiosPublic.post(image_hosting_url, imagefile, {
-      headers: {
-        "content-type": "multipart/form-data",
-      },
-    });
-    const photo = resimage.data.data.display_url;
-    createuser(data.email, data.password)
-      .then((result) => {
-        updateProfile(result.user, {
-          displayName: data.name,
-          photoURL: photo,
-        })
-          .then(() => {
-            console.log("User profile updated successfully");
-            const userInfo = {
-              name: data.name,
-              email: data.email,
-            };
-            axiosPublic.post("/users", userInfo).then((res) => {
-              if (res.data.insertedId) {
-                console.log("user added to the database", res.data);
-                reset();
-                Swal.fire({
-                  position: "top-end",
-                  icon: "success",
-                  title: "SignUp successfully",
-                  showConfirmButton: false,
-                  timer: 1500,
-                });
-                reset();
-                navigate("/");
-              }
+    try {
+        console.log(data);
+
+        // 1. Upload the image
+        const imagefile = { image: data.image[0] };
+        const resimage = await axiosPublic.post(image_hosting_url, imagefile, {
+            headers: {
+                "content-type": "multipart/form-data",
+            },
+        });
+        const photo = resimage.data.data.display_url;
+
+        // 2. Create user in Firebase
+        const result = await createuser(data.email, data.password);
+        
+        // 3. Update Firebase profile with name and photo
+        await updateProfile(result.user, {
+            displayName: data.name,
+            photoURL: photo,
+        });
+
+        console.log("User profile updated successfully");
+
+        // 4. Save user information to your backend
+        const userInfo = {
+            name: data.name,
+            email: data.email,
+        };
+
+        // Send a request to your backend to check if the user already exists or to add them
+        const res = await axiosPublic.post("/users", userInfo);
+
+        if (res.data.alreadyExists) {
+            console.log("User already exists, logging in...");
+            
+            // Success message if the user already exists and redirect
+            Swal.fire({
+                position: "top-end",
+                icon: "info",
+                title: "User already exists. Redirecting...",
+                showConfirmButton: false,
+                timer: 1500,
             });
-          })
-          .catch((error) => {
-            console.log(error);
-          });
-      })
-      .catch((error) => {
-        console.log("Error during signup:", error);
-      });
-  };
+
+            // Redirect to homepage or login page
+            navigate("/");
+        } else if (res.data.insertedId) {
+            console.log("User added to the database", res.data);
+
+            // Reset form only after everything is done
+            reset();
+
+            // Success notification
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "SignUp successfully",
+                showConfirmButton: false,
+                timer: 1500,
+            });
+
+            // Navigate user to the home or another page
+            navigate("/");
+        } else {
+            console.error("Error saving user to the database");
+        }
+    } catch (error) {
+        console.error("Error during signup:", error);
+
+        // Handle specific error for user already exists
+        if (error.response && error.response.data.message === 'Email already exists') {
+            Swal.fire({
+                position: "top-end",
+                icon: "error",
+                title: "Email already exists. Redirecting to login...",
+                showConfirmButton: false,
+                timer: 1500,
+            });
+
+            navigate("/login");
+        }
+    }
+};
+
+
 
   return (
     <div>

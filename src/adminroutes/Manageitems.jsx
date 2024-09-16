@@ -77,7 +77,7 @@ const Manageitems = () => {
                         {item.name}
                       </td>
                       <td className="text-base font-bold text-amber-600">
-                        BDT {item.price}
+                        $ {item.price}
                       </td>
                       <th>
                       <Link to={`/dashboard/manageitems/updateitem/${item._id}`}><button className="btn bg-amber-600 hover:bg-amber-400 btn-md mx-auto text-black text-2xl mr-3">

@@ -18,6 +18,8 @@ import Payment from "../userroutes/Payment";
 import Paymenthistory from "../userroutes/Paymenthistory";
 import Adminhome from "../adminroutes/Adminhome";
 import Userhome from "../userroutes/Userhome";
+import Profile from "../home/Profile";
+import Allreviews from "../userroutes/Allreviews";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +47,10 @@ const router = createBrowserRouter([
           path: '/signup',
           element: <Signup></Signup>
         },
+        {
+          path: '/profile',
+          element: <Privateroute><Profile></Profile></Privateroute>
+        },
     ]
   },
   {
@@ -69,8 +75,12 @@ const router = createBrowserRouter([
         element: <Userhome></Userhome>
       },
       {
+        path: 'reviews',
+        element: <Allreviews></Allreviews>
+      },
+      {
         path: 'adminhome',
-        element: <Adminhome></Adminhome>
+        element: <Adminroute><Adminhome></Adminhome></Adminroute>
       },
       {
         path: 'allusers',
@@ -86,7 +96,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'manageitems/updateitem/:id',
-        element: <Updateitem></Updateitem>,
+        element: <Adminroute><Updateitem></Updateitem></Adminroute>,
         loader: ({params}) => fetch(`http://localhost:5000/menus/${params.id}`)
       }
     ]

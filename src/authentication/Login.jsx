@@ -15,24 +15,30 @@ const Login = () => {
 
   const from = location.state?.from?.pathname || '/'
 
-  const handlegoogle = () => {
-    googlelogin()
-    .then((result)=>{
+  const handlegoogle = async () => {
+    try {
+        // Perform Google login
+        const result = await googlelogin();
+        
+        // Create user info object
         const userInfo = {
-          email: result.user?.email,
-          name: result.user?.displayName,
-        }
-        axiosPublic.post('/users', userInfo)
-        .then(res => {
-          console.log(res.data)
-        })
-        navigate(from, {replace: true})
-        console.log("google login success")
-    })
-    .catch(error => {
-      console.log(error)
-    })
-  }
+            email: result.user?.email,
+            name: result.user?.displayName,
+        };
+
+        // Save user information to your backend
+        const res = await axiosPublic.post('/users', userInfo);
+        console.log(res.data);
+
+        // Navigate to the desired route only after user info is saved
+        navigate(from, { replace: true });
+        console.log("Google login success");
+        
+    } catch (error) {
+        console.log("Google login error:", error);
+    }
+};
+
 
   const handlesubmit = (event) => {
     event.preventDefault();

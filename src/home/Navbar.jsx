@@ -20,7 +20,7 @@ const Navbar = () => {
         Swal.fire({
           position: "top-left",
           icon: "success",
-          title: "Login successfully",
+          title: "Log Out successfully",
           showConfirmButton: false,
           timer: 1500
         });
@@ -209,15 +209,16 @@ const Navbar = () => {
                 <ul className="menu menu-sm dropdown-content mt-2 z-10 absolute right-0 w-52 bg-white shadow-xl rounded-lg p-4 font-medium">
                   <li className="p-2 hover:scale-110 duration-300 ease-in-out transition-all">
                     <a className="flex items-center justify-between text-lg">
-                      <span>Profile</span>
-                      <span className="badge bg-pink-600 text-white">
-                        Login
-                      </span>
+                      <Link to='/profile'>Profile</Link>
                     </a>
                   </li>
                   <hr />
                   <li className="p-2 hover:scale-110 duration-300 ease-in-out transition-all">
-                    <a className="block text-lg">Settings</a>
+                    <Link to='/shop' className="block text-lg">Shop</Link>
+                  </li>
+                  <hr />
+                  <li className="p-2 hover:scale-110 duration-300 ease-in-out transition-all">
+                    <Link to='/contactus' className="block text-lg">Contact Us</Link>
                   </li>
                   <hr />
                   <li className="p-2 hover:scale-110 duration-300 ease-in-out transition-all">

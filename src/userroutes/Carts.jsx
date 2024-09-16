@@ -97,7 +97,7 @@ const Carts = () => {
                       </td>
                       <td className="text-lg font-bold">{item.name}</td>
                       <td className="text-base font-bold text-amber-600">
-                        BDT {item.price}
+                        $ {item.price}
                       </td>
                       <th>
                         <button

@@ -1,6 +1,6 @@
+import { Helmet } from "react-helmet-async";
 import Carousel from "./Carousel";
 import Dishes from "./Dishes";
-
 
 const slides = [
   "https://i.ibb.co/R0crrZ6/close-up-delicious-pizza-3.png",
@@ -10,11 +10,12 @@ const slides = [
 ];
 
 export default function Shop() {
-  
-
   return (
     <div>
       <div>
+        <Helmet>
+          <title>RestauraHub || Shop</title>
+        </Helmet>
         <div className="">
           <Carousel slides={slides}></Carousel>
         </div>

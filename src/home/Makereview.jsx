@@ -2,16 +2,23 @@ import { useForm } from "react-hook-form";
 import useaxiospublic from "../hooks/useaxiospublic";
 import useReview from "../hooks/useReview";
 import Swal from "sweetalert2";
+import useAuth from "../hooks/useAuth";
+import moment from "moment";
 
 export default function MakeReview() {
   const axiosPublic = useaxiospublic();
   const [userReviews, refetch] = useReview();
+  const {user} = useAuth()
 
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = async (data) => {
     const reviews = {
       review: data.review,
       rating: data.rating,
+      name: user?.displayName,
+      email: user?.email,
+      image: user?.photoURL,
+      date: moment().format('llll'),
     };
     const res = await axiosPublic.post("/reviews", reviews);
     if (res.data.insertedId) {
@@ -43,6 +50,7 @@ export default function MakeReview() {
                 id="review"
                 {...register("review")}
                 rows="4"
+                maxLength='40'
                 className="w-full resize-none p-3 border-2 border-amber-500 rounded-lg shadow-sm focus:outline-none "
                 placeholder="Write your review here..."
                 required

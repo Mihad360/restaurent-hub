@@ -2,11 +2,11 @@ import { FaHome, FaUsers } from "react-icons/fa";
 import { FaBook, FaCartPlus, FaShop, FaUser } from "react-icons/fa6";
 import { MdOutlineManageHistory, MdOutlinePostAdd } from "react-icons/md";
 import { RiAdminFill, RiContactsBook3Fill } from "react-icons/ri";
-import { TbBrandBooking } from "react-icons/tb";
 import { VscPreview } from "react-icons/vsc";
 import { NavLink, Outlet } from "react-router-dom";
 import useAdmin from "../hooks/useAdmin";
 import useCart from "../hooks/useCart";
+import { Helmet } from "react-helmet-async";
 
 const Dashboard = () => {
   const [isAdmin] = useAdmin();
@@ -14,6 +14,9 @@ const Dashboard = () => {
 
   return (
     <div className="">
+      <Helmet>
+          <title>RestauraHub || Dashboard</title>
+        </Helmet>
       <div className="max-w-7xl mx-auto flex">
         <div className="w-64 min-h-screen">
           <ul className="list-none p-7 text-lg text-black space-y-2 font-semibold">
@@ -198,7 +201,7 @@ const Dashboard = () => {
                 </li> */}
                 <li className="hover:underline hover:text-pink-600">
                   <NavLink
-                    to="/dashboard/fff"
+                    to="/dashboard/reviews"
                     className={({ isActive, isPending }) =>
                       isPending
                         ? "pending"

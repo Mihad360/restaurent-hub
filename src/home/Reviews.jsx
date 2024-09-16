@@ -22,11 +22,11 @@ export default function Reviews() {
             <p className="text-lg text-black pb-3">{item.review}</p>
             <div className="flex items-center gap-6">
               {
-                user ? <img className="w-16 rounded-full" src={user?.photoURL} alt="" /> : <img className="w-16" src="https://i.ibb.co/4Rdgv5m/0684456b-aa2b-4631-86f7-93ceaf33303c.png" alt="" />
+                user ? <img className="w-16 h-16 rounded-full" src={item.image} alt="" /> : <img className="w-16" src="https://i.ibb.co/4Rdgv5m/0684456b-aa2b-4631-86f7-93ceaf33303c.png" alt="" />
               }
                 <div>
                 {
-                user ? <h1>{user?.displayName}</h1> : <img src="" alt="" />
+                user ? <h1>{item.name}</h1> : <img src="" alt="" />
               }
                     <p className="text-amber-600 font-bold">{item.rating}</p>
                 </div>

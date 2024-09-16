@@ -14,17 +14,17 @@ const Banner = () => {
               Discover. Devour. Delight. Explore our finest restaurants on
               Restaurahub! <br /> pen_spark tune share more_vert
             </p>
-            <Link>
+            <Link to="/shop">
               <button className="btn bg-amber-600 hover:bg-amber-400 w-40 mx-auto text-white text-base mr-3">
                 View Shop
               </button>
             </Link>
-            <Link>
+            <Link to='/contactus'>
               <button className="btn bg-amber-600 hover:bg-amber-400 w-40 mx-auto text-white text-base mr-3">
                 Contact us
               </button>
             </Link>
-            <Link>
+            <Link to="/login">
               <button className="btn bg-pink-600 hover:bg-pink-400 w-40 mx-auto text-white text-base">
                 Login
               </button>
