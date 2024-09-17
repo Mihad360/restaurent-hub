@@ -56,17 +56,17 @@ export default function Dishcard({item}) {
     <div>
       <div className="card card-compact">
         <figure>
-          <img className="h-80 w-full"
+          <img className="h-32 md:h-80 w-full"
             src={image}
             alt={name}
           />
         </figure>
         <div className="card-body">
-          <h2 className="card-title text-2xl text-amber-600 font-bold">{name}</h2>
-          <p className="text-black text-left pb-3">{recipe}</p>
+          <h2 className="card-title text-lg md:text-2xl text-amber-600 font-bold">{name}</h2>
+          <p className="text-black text-left text-sm  pb-3">{recipe}</p>
           <div className="card-actions justify-between flex items-center">
             <h1 className="text-lg text-amber-600 font-semibold">$ {price}</h1>
-            <button onClick={addtocart} className="btn bg-amber-600 hover:bg-amber-400 w-40 mx-auto text-white text-base mr-3">Add to cart</button>
+            <button onClick={addtocart} className="btn bg-amber-600 hover:bg-amber-400 md:w-40 mx-auto text-white text-xs md:text-base mr-3">Add to cart</button>
           </div>
         </div>
       </div>

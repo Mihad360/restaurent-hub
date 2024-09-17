@@ -4,11 +4,11 @@ export default function Followus() {
   return (
     <div className="bg-gray-50">
       <div className=" pt-20 pb-16 max-w-7xl mx-auto">
-        <h1 className="text-center text-3xl text-black font-bold uppercase">
+        <h1 className="text-center text-xl lg:text-3xl text-black font-bold uppercase">
           Follow us on <br />
           <span className="text-amber-600">Social media</span>
         </h1>
-        <div className="flex items-center justify-center gap-5 pt-6">
+        <div className="flex flex-wrap items-center justify-center gap-5 pt-6">
           <div>
             <a
               target="_blank"
@@ -30,9 +30,9 @@ export default function Followus() {
             </a>
           </div>
         </div>
-        <div className="pt-8 pb-8 mt-10 relative w-[1100px] mx-auto h-[600px] transition-all hover:scale-105 ease-in-out duration-200 ">
+        <div className="pt-8 pb-8 mt-10 relative w-64 md:w-96 lg:w-[1100px] mx-auto lg:h-[600px] transition-all hover:scale-105 ease-in-out duration-200">
           <img
-            className="w-full h-full rounded-full transition-transform duration-500 hover:rotate-6 object-cover"
+            className="lg:w-full lg:h-full h-52 md:h-80 rounded-full transition-transform duration-500 hover:rotate-6 object-cover"
             src="https://i.ibb.co/F75tfbQ/top-view-meals-tasty-yummy-different-pastries-dishes-brown-surface.jpg"
             alt=""
           />

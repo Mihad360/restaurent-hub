@@ -43,11 +43,11 @@ export default function Dishes() {
       <div className="max-w-7xl mx-auto">
         <div>
           <Tabs
-            className="text-center pb-16 pt-16"
+            className="text-center pb-16 pt-0 lg:pt-16"
             defaultIndex={tabindex}
             onSelect={(index) => setTabindex(index)}
           >
-            <TabList className="flex justify-center space-x-4 border-b border-gray-300">
+            <TabList className="flex flex-wrap md:flex-row justify-center space-x-4 border-b border-gray-300">
               <Tab className="px-4 py-2 cursor-pointer" selectedClassName="bg-gray-100 text-amber-600 font-bold border-b-2 border-b-amber-600">
                 Desserts
               </Tab>
@@ -74,11 +74,11 @@ export default function Dishes() {
               {
                 loading ? (
             <div className="flex justify-center my-16">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
               {[...Array(9)].map((_, index) => (
                 <div
                   key={index}
-                  className="bg-gray-300 rounded-lg shadow-lg p-5 w-[400px] h-[400px]"> {/* Adjusted width and height */}
+                  className="bg-gray-300 rounded-lg shadow-lg p-5 w-[100px] h-[100px] lg:w-[400px] lg:h-[400px]"> {/* Adjusted width and height */}
                   <SkeletonTheme color="#bbb" highlightColor="#ccc">
                     <Skeleton width="100%" height="100%" /> {/* Adjusted Skeleton size */}
                   </SkeletonTheme>
@@ -87,7 +87,7 @@ export default function Dishes() {
             </div>
             </div>
           )  : <div className="flex justify-center pt-16">
-                <div className="grid grid-cols-3 gap-10">
+                <div className="grid grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10 px-5 lg:px-0">
                   {desserts.map((item) => (
                     <Dishcard key={item.id} item={item}></Dishcard>
                   ))}
@@ -99,11 +99,11 @@ export default function Dishes() {
               {
                 loading ? (
             <div className="flex justify-center my-16">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
               {[...Array(9)].map((_, index) => (
                 <div
                   key={index}
-                  className="bg-gray-300 rounded-lg shadow-lg p-5 w-[400px] h-[400px]"> {/* Adjusted width and height */}
+                  className="bg-gray-300 rounded-lg shadow-lg p-5 w-[100px] h-[100px] lg:w-[400px] lg:h-[400px]"> {/* Adjusted width and height */}
                   <SkeletonTheme color="#bbb" highlightColor="#ccc">
                     <Skeleton width="100%" height="100%" /> {/* Adjusted Skeleton size */}
                   </SkeletonTheme>
@@ -112,7 +112,7 @@ export default function Dishes() {
             </div>
             </div>
           )  : <div className="flex justify-center pt-16">
-                <div className="grid grid-cols-3 gap-10">
+                <div className="grid grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10 px-5 lg:px-0">
                   {soups.map((item) => (
                     <Dishcard key={item.id} item={item}></Dishcard>
                   ))}
@@ -124,11 +124,11 @@ export default function Dishes() {
               {
                 loading ? (
             <div className="flex justify-center my-16">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
               {[...Array(9)].map((_, index) => (
                 <div
                   key={index}
-                  className="bg-gray-300 rounded-lg shadow-lg p-5 w-[400px] h-[400px]"> {/* Adjusted width and height */}
+                  className="bg-gray-300 rounded-lg shadow-lg p-5 w-[100px] h-[100px] lg:w-[400px] lg:h-[400px]"> {/* Adjusted width and height */}
                   <SkeletonTheme color="#bbb" highlightColor="#ccc">
                     <Skeleton width="100%" height="100%" /> {/* Adjusted Skeleton size */}
                   </SkeletonTheme>
@@ -137,7 +137,7 @@ export default function Dishes() {
             </div>
             </div>
           )  : <div className="flex justify-center pt-16">
-                <div className="grid grid-cols-3 gap-10">
+                <div className="grid grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10 px-5 lg:px-0">
                   {pizzas.map((item) => (
                     <Dishcard key={item.id} item={item}></Dishcard>
                   ))}
@@ -149,11 +149,11 @@ export default function Dishes() {
               {
                 loading ? (
             <div className="flex justify-center my-16">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
               {[...Array(9)].map((_, index) => (
                 <div
                   key={index}
-                  className="bg-gray-300 rounded-lg shadow-lg p-5 w-[400px] h-[400px]"> {/* Adjusted width and height */}
+                  className="bg-gray-300 rounded-lg shadow-lg p-5 w-[100px] h-[100px] lg:w-[400px] lg:h-[400px]"> {/* Adjusted width and height */}
                   <SkeletonTheme color="#bbb" highlightColor="#ccc">
                     <Skeleton width="100%" height="100%" /> {/* Adjusted Skeleton size */}
                   </SkeletonTheme>
@@ -162,7 +162,7 @@ export default function Dishes() {
             </div>
             </div>
           )  : <div className="flex justify-center pt-16">
-                <div className="grid grid-cols-3 gap-10">
+                <div className="grid grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10 px-5 lg:px-0">
                   {chickens.map((item) => (
                     <Dishcard key={item.id} item={item}></Dishcard>
                   ))}
@@ -174,11 +174,11 @@ export default function Dishes() {
               {
                 loading ? (
             <div className="flex justify-center my-16">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
               {[...Array(9)].map((_, index) => (
                 <div
                   key={index}
-                  className="bg-gray-300 rounded-lg shadow-lg p-5 w-[400px] h-[400px]"> {/* Adjusted width and height */}
+                  className="bg-gray-300 rounded-lg shadow-lg p-5 w-[100px] h-[100px] lg:w-[400px] lg:h-[400px]"> {/* Adjusted width and height */}
                   <SkeletonTheme color="#bbb" highlightColor="#ccc">
                     <Skeleton width="100%" height="100%" /> {/* Adjusted Skeleton size */}
                   </SkeletonTheme>
@@ -187,7 +187,7 @@ export default function Dishes() {
             </div>
             </div>
           )  : <div className="flex justify-center pt-16">
-                <div className="grid grid-cols-3 gap-10">
+                <div className="grid grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10 px-5 lg:px-0">
                   {drinks.map((item) => (
                     <Dishcard key={item.id} item={item}></Dishcard>
                   ))}
@@ -199,11 +199,11 @@ export default function Dishes() {
               {
                 loading ? (
             <div className="flex justify-center my-16">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
               {[...Array(9)].map((_, index) => (
                 <div
                   key={index}
-                  className="bg-gray-300 rounded-lg shadow-lg p-5 w-[400px] h-[400px]"> {/* Adjusted width and height */}
+                  className="bg-gray-300 rounded-lg shadow-lg p-5 w-[100px] h-[100px] lg:w-[400px] lg:h-[400px]"> {/* Adjusted width and height */}
                   <SkeletonTheme color="#bbb" highlightColor="#ccc">
                     <Skeleton width="100%" height="100%" /> {/* Adjusted Skeleton size */}
                   </SkeletonTheme>
@@ -212,7 +212,7 @@ export default function Dishes() {
             </div>
             </div>
           )  : <div className="flex justify-center pt-16">
-                <div className="grid grid-cols-3 gap-10">
+                <div className="grid grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10 px-5 lg:px-0">
                   {burgers.map((item) => (
                     <Dishcard key={item.id} item={item}></Dishcard>
                   ))}
@@ -224,11 +224,11 @@ export default function Dishes() {
               {
                 loading ? (
             <div className="flex justify-center my-16">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
               {[...Array(9)].map((_, index) => (
                 <div
                   key={index}
-                  className="bg-gray-300 rounded-lg shadow-lg p-5 w-[400px] h-[400px]"> {/* Adjusted width and height */}
+                  className="bg-gray-300 rounded-lg shadow-lg p-5 w-[100px] h-[100px] lg:w-[400px] lg:h-[400px]"> {/* Adjusted width and height */}
                   <SkeletonTheme color="#bbb" highlightColor="#ccc">
                     <Skeleton width="100%" height="100%" /> {/* Adjusted Skeleton size */}
                   </SkeletonTheme>
@@ -237,7 +237,7 @@ export default function Dishes() {
             </div>
             </div>
           )  : <div className="flex justify-center pt-16">
-                <div className="grid grid-cols-3 gap-10">
+                <div className="grid grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10 px-5 lg:px-0">
                   {salads.map((item) => (
                     <Dishcard key={item.id} item={item}></Dishcard>
                   ))}

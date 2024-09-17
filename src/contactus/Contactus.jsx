@@ -5,7 +5,7 @@ import Followus from "./Followus";
 
 export default function Contactus() {
   return (
-    <div className="pt-20">
+    <div className="pt-10 lg:pt-20">
       <Helmet>
           <title>RestauraHub || Contact Us</title>
         </Helmet>

@@ -33,12 +33,12 @@ export default function Contact() {
     };
 
   return (
-    <div className="bg-gradient-to-t from-amber-100 to-gray-50">
+    <div className="bg-gradient-to-t from-amber-100 to-gray-50 pb-10">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-3xl font-semibold text-amber-600 text-center pb-5">
+        <h1 className="text-xl lg:text-3xl font-semibold text-amber-600 text-center pb-5 ">
           Contact us via Email
         </h1>
-        <div className="flex items-center justify-center gap-20">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-10 lg:gap-20">
           <div>
             <img
               className="w-[500px]"
@@ -46,7 +46,7 @@ export default function Contact() {
               alt=""
             />
           </div>
-          <form className="space-y-3 w-96" ref={form} onSubmit={sendEmail}>
+          <form className="space-y-3 px-5 lg:w-96" ref={form} onSubmit={sendEmail}>
             <div className="">
               <label htmlFor="" className="text-black font-medium ">
                 Name

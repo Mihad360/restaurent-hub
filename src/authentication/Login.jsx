@@ -64,16 +64,16 @@ const Login = () => {
   };
 
   return (
-    <div className="pt-10">
+    <div className="pt-12">
       <div className="hero shapedividers_com-332 bg-gradient-to-r from-amber-100 via-gray-100 to-amber-100 min-h-screen">
-        <div className="hero-content flex-col lg:flex-row max-w-7xl mx-auto gap-16">
-          <div>
+        <div className="hero-content flex-col md:flex-row max-w-7xl mx-auto gap-16">
+          <div className="hidden md:block">
             <img
               src="https://i.ibb.co/gTpBk6Q/10124049-removebg-preview.png"
               alt=""
             />
           </div>
-          <div className="card shrink-0 border-2 border-amber-400">
+          <div className="card shrink-0 border-2 border-amber-400 w-64 md:w-80 lg:w-[450px]">
             <form onSubmit={handlesubmit} className="card-body">
               <div className="form-control">
                 <label className="label">
@@ -83,7 +83,7 @@ const Login = () => {
                   type="email"
                   name="email"
                   placeholder="Email"
-                  className="outline-none px-3 py-2 rounded-lg border-2 border-amber-300 w-96"
+                  className="outline-none px-3 py-2 rounded-lg border-2 border-amber-300 lg:w-96"
                   required
                 />
               </div>
@@ -97,11 +97,11 @@ const Login = () => {
                   type="password"
                   name="password"
                   placeholder="Password"
-                  className="outline-none px-3 py-2 rounded-lg border-2 border-amber-300 w-96"
+                  className="outline-none px-3 py-2 rounded-lg border-2 border-amber-300 lg:w-96"
                   required
                 />
                 <label className="label">
-                  <p className="text-base">
+                  <p className="text-sm lg:text-base">
                     Don't Have An Account? Please{" "}
                     <Link
                       to="/signup"
@@ -119,7 +119,7 @@ const Login = () => {
               </div>
             </form>
             <div className="mx-auto pb-7">
-              <button onClick={handlegoogle} className="text-3xl btn bg-gray-300 hover:bg-gray-100 mx-auto text-white flex items-center">
+              <button onClick={handlegoogle} className="text-xl lg:text-3xl btn bg-gray-300 hover:bg-gray-100 mx-auto text-white flex items-center">
                 <FcGoogle />{" "}
                 <p className="text-lg text-black">Login with Google</p>
               </button>
