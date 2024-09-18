@@ -2,34 +2,21 @@ import { useForm } from "react-hook-form";
 import { FaEdit } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
 import useAxiossecure from "../hooks/useAxiossecure";
-import useaxiospublic from "../hooks/useaxiospublic";
 import Swal from "sweetalert2";
-
-const image_hosting_key = import.meta.env.VITE_IMAGE_UPLOAD_KEY;
-const image_hosting_url = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
 
 const Updateitem = () => {
 
-    const axiosPublic = useaxiospublic()
     const axiosSecure = useAxiossecure()
-    const {name, category, recipe, image, price, _id} = useLoaderData()
+    const {name, category, recipe, price, _id} = useLoaderData()
 
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = async (data) => {
     console.log(data);
-    const imagefile = {image: data.image[0]}
-    const res = await axiosPublic.post(image_hosting_url, imagefile, {
-      headers: {
-        "content-type": 'multipart/form-data'
-      }
-    })
-    if(res.data.success){
       const menuItem = {
         name: data.name,
         category: data.category,
         price: parseFloat(data.price),
         recipe: data.recipe,
-        image: res.data.data.display_url
       }
       const menudata = await axiosSecure.patch(`/menus/${_id}`, menuItem)
       console.log(menudata.data)
@@ -43,8 +30,6 @@ const Updateitem = () => {
         });
         reset()
       }
-    }
-    console.log(res.data)
   };
 
   return (
@@ -121,18 +106,6 @@ const Updateitem = () => {
                 rows={4}
                 className="outline-none px-3 py-2 rounded-lg border border-amber-600 w-full mt-2"
                 {...register("recipe")}
-              />
-            </div>
-            <div className="pt-3">
-              <div>
-                <label className="text-lg font-medium text-black">
-                  Recipe Image
-                </label>
-              </div>
-              <input
-                className="mt-2 file-input file-input-bordered w-full max-w-md"
-                type="file"
-                {...register("image")}
               />
             </div>
             <div className="mt-7 text-center form-control">

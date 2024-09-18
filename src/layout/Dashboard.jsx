@@ -19,7 +19,7 @@ const Dashboard = () => {
         </Helmet>
       <div className="max-w-7xl mx-auto flex">
         <div className="w-64 min-h-screen">
-          <ul className="list-none p-7 text-lg text-black space-y-2 font-semibold">
+          <ul className="list-none p-2 lg:p-7 text-xs lg:text-lg text-black space-y-2 font-semibold">
             {isAdmin ? (
               <><li className="hover:underline hover:text-pink-600">
               <NavLink
@@ -32,7 +32,7 @@ const Dashboard = () => {
                     : ""
                 }
               >
-                <span className="flex items-center gap-3">
+                <span className="flex items-center gap-1 lg:gap-3">
                 <RiAdminFill />
 
                   Admin Home
@@ -50,7 +50,7 @@ const Dashboard = () => {
                     : ""
                 }
               >
-                <span className="flex items-center gap-3">
+                <span className="flex items-center gap-1 lg:gap-3">
                 <MdOutlinePostAdd />
 
                   Add Items
@@ -68,7 +68,7 @@ const Dashboard = () => {
                     : ""
                 }
               >
-                <span className="flex items-center gap-3">
+                <span className="flex items-center gap-1 lg:gap-3">
                 <MdOutlineManageHistory />
 
                   Manage Items
@@ -104,7 +104,7 @@ const Dashboard = () => {
                     : ""
                 }
               >
-                <span className="flex items-center gap-3">
+                <span className="flex items-center gap-1 lg:gap-3">
                 <FaUsers />
 
                   All Users
@@ -125,7 +125,7 @@ const Dashboard = () => {
                         : ""
                     }
                   >
-                    <span className="flex items-center gap-3">
+                    <span className="flex items-center gap-1 lg:gap-3">
                       <FaUser />
                       User Home
                     </span>
@@ -142,7 +142,7 @@ const Dashboard = () => {
                         : ""
                     }
                   >
-                    <span className="flex items-center gap-3">
+                    <span className="flex items-center gap-1 lg:gap-3">
                       <FaCartPlus />
                       Carts<p className="text-pink-600 font-semibold">({cart.length})</p>
                     </span>
@@ -159,7 +159,7 @@ const Dashboard = () => {
                         : ""
                     }
                   >
-                    <span className="flex items-center gap-3">
+                    <span className="flex items-center gap-1 lg:gap-3">
                       <FaBook />
                       Payment
                     </span>
@@ -176,7 +176,7 @@ const Dashboard = () => {
                         : ""
                     }
                   >
-                    <span className="flex items-center gap-3">
+                    <span className="flex items-center gap-1 lg:gap-3">
                       <FaBook />
                       Payment History
                     </span>
@@ -210,7 +210,7 @@ const Dashboard = () => {
                         : ""
                     }
                   >
-                    <span className="flex items-center gap-3">
+                    <span className="flex items-center gap-1 lg:gap-3">
                       <VscPreview />
                       Reviews
                     </span>
@@ -234,7 +234,7 @@ const Dashboard = () => {
                     : ""
                 }
               >
-                <span className="flex items-center gap-3">
+                <span className="flex items-center gap-1 lg:gap-3">
                   <FaHome />
                   Home
                 </span>
@@ -251,7 +251,7 @@ const Dashboard = () => {
                     : ""
                 }
               >
-                <span className="flex items-center gap-3">
+                <span className="flex items-center gap-1 lg:gap-3">
                   <FaShop />
                   Shop
                 </span>
@@ -268,7 +268,7 @@ const Dashboard = () => {
                     : ""
                 }
               >
-                <span className="flex items-center gap-3">
+                <span className="flex items-center gap-1 lg:gap-3">
                   <RiContactsBook3Fill />
                   Contact Us
                 </span>

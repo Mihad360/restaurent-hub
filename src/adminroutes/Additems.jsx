@@ -54,27 +54,27 @@ const Additems = () => {
   return (
     <div>
       <div>
-        <h1 className="text-center text-3xl font-bold text-amber-600 pt-5">
+        <h1 className="text-center text-lg lg:text-3xl font-bold text-amber-600 pt-5">
           Add Items
         </h1>
-        <div className="bg-gray-200 rounded-lg p-10 mt-6">
+        <div className="bg-gray-200 rounded-lg p-3 lg:p-10 mt-6 mr-3 lg:mr-0">
           <form onSubmit={handleSubmit(onSubmit)}>
             <div>
               <div>
-                <label className="text-lg font-medium text-black">Recipe Name</label>
+                <label className="text-base lg:text-lg font-medium text-black">Recipe Name</label>
               </div>
               <input type="text" placeholder="item name"
-                className="outline-none px-3 py-2 rounded-lg border border-amber-600 w-full mt-2"
+                className="outline-none px-3 py-2 rounded-lg border border-amber-600 w-36 md:w-full mt-2"
                 {...register("name", {required: true})}
               />
             </div>
-            <div className="flex items-center gap-10 pt-3">
+            <div className="flex flex-col md:flex-row items-center gap-4 lg:gap-10 pt-3">
               <div>
                 <div>
-                  <label className="text-lg font-medium text-black">Category</label>
+                  <label className="text-base lg:text-lg font-medium text-black">Category</label>
                 </div>
                 <select defaultValue="default"
-                  className="outline-none px-3 py-2 rounded-lg border border-amber-600 w-[400px] mt-2"
+                  className="outline-none px-3 py-2 rounded-lg border border-amber-600 w-36 md:w-52 lg:w-[400px] mt-2 w-"
                   {...register("category", {required: true})}
                 >
                   <option disabled value="default">Select a category </option>
@@ -89,35 +89,35 @@ const Additems = () => {
               </div>
               <div>
                 <div>
-                  <label className="text-lg font-medium text-black">Price</label>
+                  <label className="text-base lg:text-lg font-medium text-black">Price</label>
                 </div>
                 <input type="number" placeholder="item price"
-                  className="outline-none px-3 py-2 rounded-lg border border-amber-600 w-[400px] mt-2"
+                  className="outline-none px-3 py-2 rounded-lg border border-amber-600 w-36 md:w-full lg:w-[400px] mt-2"
                   {...register("price", {required: true})}
                 />
               </div>
             </div>
             <div className="pt-3">
               <div>
-                <label className="text-lg font-medium text-black">Recipe Details</label>
+                <label className="text-base lg:text-lg font-medium text-black">Recipe Details</label>
               </div>
               <textarea type="text" placeholder="recipe details or description" rows={4} 
-                className="outline-none px-3 py-2 rounded-lg border border-amber-600 w-full mt-2"
+                className="outline-none px-3 py-2 rounded-lg border border-amber-600 w-36 md:w-full mt-2"
                 {...register("recipe", {required: true})}
               />
             </div>
             <div className="pt-3">
               <div>
-                <label className="text-lg font-medium text-black">Recipe Image</label>
+                <label className="text-base lg:text-lg font-medium text-black">Recipe Image</label>
               </div>
               <input
-                className="mt-2 file-input file-input-bordered w-full max-w-md"
+                className="mt-2 file-input file-input-bordered w-36 md:w-full max-w-md"
                 type="file"
                 {...register("image", {required: true})}
               />
             </div>
             <div className="mt-7 text-center form-control">
-              <button type="submit" className="btn bg-amber-600 hover:bg-amber-400 btn-md mx-auto text-white text-lg">Add Item <GiHotMeal /></button>
+              <button type="submit" className="btn bg-amber-600 hover:bg-amber-400 btn-md mx-auto text-white text-base lg:text-lg">Add Item <GiHotMeal /></button>
               
               </div>
           </form>

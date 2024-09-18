@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
-import { FaCartPlus, FaBars, FaTimes, FaFacebook, FaInstagramSquare, FaTwitter } from "react-icons/fa";
+import { FaCartPlus, FaBars, FaTimes} from "react-icons/fa";
 import 'react-toastify/dist/ReactToastify.css';
 import useCart from "../hooks/useCart";
 import useAuth from "../hooks/useAuth";
@@ -93,7 +93,7 @@ const Navbar = () => {
           {/* Logo and Website Name */}
           <div className="flex-1 flex justify-center md:justify-start items-center">
             <img className="w-16 lg:w-32 hidden md:block" src="https://i.ibb.co/rmm66vd/360-F-553007886-vpg-BDlw-Ay-Aa-CTABowv-Ia-PMPg437ha-VKR-removebg-preview.png" alt="Logo" />
-            <h1 className="text-xl lg:text-3xl font-extrabold tracking-wide">
+            <h1 className="text-xl ml-3 md:ml-0 lg:text-3xl font-extrabold tracking-wide">
               <span className="text-amber-600">Restaura</span>Hub
             </h1>
           </div>
@@ -113,6 +113,9 @@ const Navbar = () => {
                 <div className="badge badge-secondary text-xs lg:text-lg">+{cart.length}</div>
               </button>
             </Link>
+            {
+              user ? '' : <Link to='/login'><button className="hover:underline text-amber-600 font-semibold ml-3">Login</button></Link>
+            }
 
             {/* User Profile Dropdown */}
             <div className="dropdown dropdown-end relative">
